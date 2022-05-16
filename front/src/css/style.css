@@ -1,0 +1,47 @@
+.menu {
+  background-color: #144673;
+  align-items: center;
+  width: 8rem;
+}
+a {
+  color: white;
+  margin-left: 1.5rem;
+}
+a[disabled]:hover {
+  color: none;
+  background: whitesmoke;
+}
+a i {
+  font-size: 1rem;
+  align-content: center;
+}
+img {
+  margin: 0.5rem;
+  width: 70px;
+  height: 70px;
+}
+.log {
+  background-color: #00a4e3;
+  color: white;
+}
+ul {
+  text-align: center;
+}
+ul li {
+  text-align: center;
+  padding-top: 1rem;
+  width: 2rem;
+}
+nav div {
+  padding-bottom: 0.5rem;
+  width: 2rem;
+}
+.btn-alinhar {
+  margin-left: 1rem;
+}
+.alinhar {
+  margin-left: 1rem;
+}
+div.form-row {
+  margin-top: 0.5rem;
+}
