@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,168 +18,210 @@
   </head>
 
   <body>
-    <div>
-      <nav class="col-md-2 d-none d-md-block sidebar menu">
-        <div class="sidebar-sticky">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link-active" href="#">
-                <i class="bi bi-emoji-smile-fill"> Acessibilidade </i>
-              </a>
-            </li>
-
-            <img src="./front/src/img/Logo.png" alt="logo do projeto." />
-
-            <li class="nav-item alinhar">
-              <a class="nav-link-active" href="#">
-                <i class="bi bi-house-fill"> Home </i>
-              </a>
-            </li>
-
-            <li class="nav-item alinhar">
-              <a class="nav-link-active" href="#">
-                <i class="bi bi-plus-square-fill"> Publicar </i>
-              </a>
-            </li>
-          </ul>
-          <ul class="nav flex-column">
-            <li class="nav-item btn-alinhar">
-              <button type="button nav-button" class="btn log">Login</button>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-
     <div class="container-fluid">
-      <h2 class="align-center">Nova Publicação</h2>
-      <form class="bg-light">
-        <div class="container">
-          <div class="form-row">
-            <div class="col-md-2">
-              <label for="estabelecimento">Estabelecimento: </label>
-            </div>
-            <div class="col-md-4">
-              <input
-                type="text"
-                class="form-control"
-                id="estabelecimento"
-                placeholder="Estabelecimento"
-                value="estabelecimento"
-                required
-              />
-            </div>
-            <div class="col-md-4">
-              <p>Adicionar fotos:</p>
-            </div>
-          </div>
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block sidebar menu">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link-active" href="#">
+                  <i class="bi bi-emoji-smile-fill"> Acessibilidade </i>
+                </a>
+              </li>
 
-          <div class="form-row">
-            <div class="col-md-2">
-              <label for="estabelecimento">Categoria: </label>
-            </div>
-            <div class="col-md-4">
-              <input
-                type="text"
-                class="form-control"
-                id="categoria"
-                placeholder="categoria"
-                value="categoria"
-                required
-              />
-            </div>
-          </div>
+              <img src="./front/src/img/Logo.png" alt="logo do projeto." />
 
-          <div class="form-row">
-            <div class="col-md-2">
-              <label for="estabelecimento">Endereço: </label>
-            </div>
-            <div class="col-md-4">
-              <input
-                type="text"
-                class="form-control"
-                id="endereço"
-                placeholder="endereço"
-                value="endereço"
-                required
-              />
-            </div>
-          </div>
+              <li class="nav-item alinhar">
+                <a class="nav-link-active" href="#">
+                  <i class="bi bi-house-fill"> Home </i>
+                </a>
+              </li>
 
-          <div class="form-row">
-            <div class="col-md-2">
-              <label for="estabelecimento">Cidade: </label>
-            </div>
-            <div class="col-md-4">
-              <input
-                type="text"
-                class="form-control"
-                id="cidade"
-                placeholder="cidade"
-                value="cidade"
-                required
-              />
-            </div>
-          </div>
+              <li class="nav-item alinhar">
+                <a class="nav-link-active" href="#">
+                  <i class="bi bi-plus-square-fill"> Publicar </i>
+                </a>
+              </li>
+            </ul>
 
-          <div class="form-row">
-            <div class="col-md-2">
-              <label for="estabelecimento">Estato: </label>
-            </div>
-            <div class="col-md-4">
-              <input
-                type="text"
-                class="form-control"
-                id="estato"
-                placeholder="estato"
-                value="estato"
-                required
-              />
-            </div>
-            <div class="col-md">
-              <img src="..." class="rounded mx-auto d-block" alt="add img" />
-            </div>
+            <ul class="nav flex-column">
+              <li class="nav-item btn-alinhar">
+                <button type="button nav-button" class="btn log">Login</button>
+              </li>
+            </ul>
           </div>
-        </div>
+        </nav>
 
-        <hr />
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+          <h5 class="text-center">Nova Publicação</h5>
+          <form class="bg-dark formulario">
+            <div class="container">
+              <div class="form-row pt-2">
+                <div class="col-md-2">
+                  <label for="estabelecimento">Estabelecimento: </label>
+                </div>
+                <div class="col-md-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="estabelecimento"
+                    placeholder="Estabelecimento"
+                    value="estabelecimento"
+                    required
+                  />
+                </div>
+                <div class="col-md-4">
+                  <p>Adicionar fotos:</p>
+                </div>
+              </div>
 
-        <div class="container">
-          <div class="form-row">
-            <div class="col-md-2">
-              <label for="estabelecimento">Estato: </label>
+              <div class="form-row">
+                <div class="col-md-2">
+                  <label for="estabelecimento">Categoria: </label>
+                </div>
+                <div class="col-md-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="categoria"
+                    placeholder="categoria"
+                    value="categoria"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-2">
+                  <label for="estabelecimento">Endereço: </label>
+                </div>
+                <div class="col-md-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="endereço"
+                    placeholder="endereço"
+                    value="endereço"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-2">
+                  <label for="estabelecimento">Cidade: </label>
+                </div>
+                <div class="col-md-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cidade"
+                    placeholder="cidade"
+                    value="cidade"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-2">
+                  <label for="estabelecimento">Estato: </label>
+                </div>
+                <div class="col-md-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="estato"
+                    placeholder="estato"
+                    value="estato"
+                    required
+                  />
+                </div>
+                <div class="col-md">
+                  <img
+                    src="..."
+                    class="rounded mx-auto d-block"
+                    alt="add img"
+                  />
+                </div>
+              </div>
             </div>
-            <div class="col-md-4">
-              <input
-                type="text"
-                class="form-control"
-                id="estato"
-                placeholder="estato"
-                value="estato"
-                required
-              />
+
+            <hr />
+
+            <div class="container pb-2">
+              <h5 class="text-center">Acessibilidade:</h5>
+
+              <div class="form-row">
+                <div class="col-md-8">
+                  <label for="estabelecimento">Rampa de Acesso: </label>
+                </div>
+                <div class="col-md-4">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-8">
+                  <label for="estabelecimento">Espaço interno: </label>
+                </div>
+                <div class="col-md-4">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-8">
+                  <label for="estabelecimento">Banheiro adaptado: </label>
+                </div>
+                <div class="col-md-4">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-8">
+                  <label for="estabelecimento">Elevador acessível: </label>
+                </div>
+                <div class="col-md-4">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="col-md-12">
+                  <label for="estabelecimento"
+                    >Digite sua opinião sobre o local:
+                  </label>
+                </div>
+                <div class="col-md-4">
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                  ></textarea>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </form>
+          </form>
+        </main>
+      </div>
     </div>
-
-    <footer>
-      <script
-        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"
-      ></script>
-    </footer>
   </body>
 </html>
