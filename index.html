@@ -1,4 +1,5 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -18,210 +19,115 @@
   </head>
 
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <nav class="col-md-2 d-none d-md-block sidebar menu">
-          <div class="sidebar-sticky">
-            <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link-active" href="#">
-                  <i class="bi bi-emoji-smile-fill"> Acessibilidade </i>
-                </a>
-              </li>
-
-              <img src="./front/src/img/Logo.png" alt="logo do projeto." />
-
-              <li class="nav-item alinhar">
-                <a class="nav-link-active" href="#">
-                  <i class="bi bi-house-fill"> Home </i>
-                </a>
-              </li>
-
-              <li class="nav-item alinhar">
-                <a class="nav-link-active" href="#">
-                  <i class="bi bi-plus-square-fill"> Publicar </i>
-                </a>
-              </li>
-            </ul>
-
-            <ul class="nav flex-column">
-              <li class="nav-item btn-alinhar">
-                <button type="button nav-button" class="btn log">Login</button>
-              </li>
-            </ul>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-light"
+        style="background-color: #144673"
+      >
+        <img src="./front/src/img/Logo.png" />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Alterna navegação"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#"
+              >Home <span class="sr-only">(Página atual)</span></a
+            >
+            <a class="nav-item nav-link" href="#">Destaques</a>
+            <a class="nav-item nav-link" href="#">Preços</a>
+            <a class="nav-item nav-link disabled" href="#">Desativado</a>
           </div>
-        </nav>
+        </div>
+      </nav>
+    </header>
 
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-          <h5 class="text-center">Nova Publicação</h5>
-          <form class="bg-dark formulario">
-            <div class="container">
-              <div class="form-row pt-2">
-                <div class="col-md-2">
-                  <label for="estabelecimento">Estabelecimento: </label>
-                </div>
-                <div class="col-md-4">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="estabelecimento"
-                    placeholder="Estabelecimento"
-                    value="estabelecimento"
-                    required
-                  />
-                </div>
-                <div class="col-md-4">
-                  <p>Adicionar fotos:</p>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="col-md-2">
-                  <label for="estabelecimento">Categoria: </label>
-                </div>
-                <div class="col-md-4">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="categoria"
-                    placeholder="categoria"
-                    value="categoria"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="col-md-2">
-                  <label for="estabelecimento">Endereço: </label>
-                </div>
-                <div class="col-md-4">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="endereço"
-                    placeholder="endereço"
-                    value="endereço"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="col-md-2">
-                  <label for="estabelecimento">Cidade: </label>
-                </div>
-                <div class="col-md-4">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="cidade"
-                    placeholder="cidade"
-                    value="cidade"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="col-md-2">
-                  <label for="estabelecimento">Estato: </label>
-                </div>
-                <div class="col-md-4">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="estato"
-                    placeholder="estato"
-                    value="estato"
-                    required
-                  />
-                </div>
-                <div class="col-md">
-                  <img
-                    src="..."
-                    class="rounded mx-auto d-block"
-                    alt="add img"
-                  />
+    <main>
+      <form class="m-md-5">
+        <div
+          class="container shadow-lg"
+          style="background-color: #ebebeb; border-radius: 10px; padding: 1rem"
+        >
+          <div class="row">
+            <div class="col-md-3 pt-10">
+              <div class="card" style="width: auto">
+                <div class="card-body">
+                  <h5 class="card-title">Título do card</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    Subtitulo do card
+                  </h6>
+                  <p class="card-text">
+                    Um exemplo de texto rápido para construir o título do card e
+                    fazer preencher o conteúdo do card.
+                  </p>
+                  <a href="#" class="card-link">Link do card</a>
+                  <a href="#" class="card-link">Outro link</a>
                 </div>
               </div>
             </div>
 
-            <hr />
-
-            <div class="container pb-2">
-              <h5 class="text-center">Acessibilidade:</h5>
-
-              <div class="form-row">
-                <div class="col-md-8">
-                  <label for="estabelecimento">Rampa de Acesso: </label>
-                </div>
-                <div class="col-md-4">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
+            <div class="col-md-6 pt-10">
+              <div class="form-group">
+                <label for="formGroupExampleInput">Label exemplo</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="formGroupExampleInput"
+                  placeholder="Input exemplo"
+                />
               </div>
-
-              <div class="form-row">
-                <div class="col-md-8">
-                  <label for="estabelecimento">Espaço interno: </label>
-                </div>
-                <div class="col-md-4">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Outra label</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="formGroupExampleInput2"
+                  placeholder="Outro input"
+                />
               </div>
+            </div>
 
-              <div class="form-row">
-                <div class="col-md-8">
-                  <label for="estabelecimento">Banheiro adaptado: </label>
-                </div>
-                <div class="col-md-4">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="col-md-8">
-                  <label for="estabelecimento">Elevador acessível: </label>
-                </div>
-                <div class="col-md-4">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="col-md-12">
-                  <label for="estabelecimento"
-                    >Digite sua opinião sobre o local:
-                  </label>
-                </div>
-                <div class="col-md-4">
-                  <textarea
-                    class="form-control"
-                    id="exampleFormControlTextarea1"
-                    rows="3"
-                  ></textarea>
+            <div class="col-md-3">
+              <div class="card" style="width: auto">
+                <img
+                  class="card-img-top"
+                  src=".../100px180/?text=Image cap"
+                  alt="Imagem de capa do card"
+                />
+                <div class="card-body">
+                  <p class="card-text">Adicionar uma imagem na publicação</p>
+                  <button class="btn btn-primary">Adicionar Imagem</button>
                 </div>
               </div>
             </div>
-          </form>
-        </main>
-      </div>
-    </div>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"
+      ></script>
+    </footer>
   </body>
 </html>

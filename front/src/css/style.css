@@ -1,47 +1,19 @@
-.menu {
-  background-color: #144673;
-  align-items: center;
-  width: 8rem;
+/*Variáveis Globais*/
+:root {
+  --bg-nav: #144673;
+  --bg-form: #ebebeb;
 }
-a {
-  color: white;
-  margin-left: 1.5rem;
+
+/*Classes da página de nova publicação*/
+.form {
+  margin-top: 1rem;
+  background-color: var(--bg-form);
 }
-a[disabled]:hover {
-  color: none;
-  background: whitesmoke;
-}
-a i {
-  font-size: 1rem;
-  align-content: center;
-}
-img {
-  margin: 0.5rem;
-  width: 70px;
-  height: 70px;
-}
-.log {
-  background-color: #00a4e3;
-  color: white;
-}
-ul {
-  text-align: center;
-}
-ul li {
-  text-align: center;
-  padding-top: 1rem;
-  width: 2rem;
-}
-nav div {
-  padding-bottom: 0.5rem;
-  width: 2rem;
-}
-.btn-alinhar {
-  margin-left: 1rem;
-}
-.alinhar {
-  margin-left: 1rem;
-}
-div.form-row {
-  margin-top: 0.5rem;
-}
+
+/*Ids da página de nova publicação*/
+
+/*Classes da página de feed*/
+/*Ids da página de feed*/
+
+/*Classes da página de perfil do usuário*/
+/*Ids da página de perfil do usuário*/
