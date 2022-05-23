@@ -1,0 +1,23 @@
+/*Variáveis Globais para o GitHub Pages*/
+:root {
+  --bg-nav: #144673;
+  --bg-form: #ebebeb;
+}
+
+nav {
+  background-color: var(--bg-nav);
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: whitesmoke;
+}
+.container {
+  padding: 1rem;
+}
+.dropdown {
+  background-color: transparent;
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./front/src/css/style.css" />
+    <title>Feed | Pcd em Ação</title>
+  </head>
+
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-light"
+        style="background-color: #144673"
+      >
+        <img src="./front/src/img/Logo.png" />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Alterna navegação"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#"
+              >Home <span class="sr-only">(Página atual)</span></a
+            >
+            <a class="nav-item nav-link" href="#">Destaques</a>
+            <a class="nav-item nav-link" href="#">Preços</a>
+            <a class="nav-item nav-link disabled" href="#">Desativado</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h2 class="text-center m-md-5">Nova Publicação</h2>
+      <form
+        class="m-lg-3 shadow-lg"
+        style="background-color: #ebebeb; border-radius: 10px; padding: 1rem"
+      >
+        <!-- Linha do Endereço do Estabelecimento -->
+        <div class="form-row">
+          <div class="form-group col-md-12 text-center">
+            <h5>Sobre o Estabelecimento:</h5>
+          </div>
+          <div class="form-group col-md-8">
+            <label for="">Estabelecimento</label>
+            <input
+              type="text"
+              class="form-control"
+              id=""
+              placeholder="Nome do Estabelecimento"
+            />
+
+            <label for="">Categoria</label>
+            <select id="" class="form-control">
+              <option selected>Escolher...</option>
+              <option>...</option>
+            </select>
+
+            <label for="">Endereço</label>
+            <input
+              type="text"
+              class="form-control"
+              id=""
+              placeholder="Endereço do Estabelecimento"
+            />
+          </div>
+
+          <div class="form-group col-md-4">
+            <div class="card h-auto">
+              <img
+                class="card-img-top"
+                src=".../100px180/?text=Image cap"
+                alt="Imagem de capa do card"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Um exemplo de texto rápido para construir o título do card e
+                  fazer preencher o conteúdo do card.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group col-md-3">
+            <label for="">Cidade</label>
+            <select id="" class="form-control">
+              <option selected>Escolher...</option>
+              <option>...</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-2">
+            <label for="">Estado</label>
+            <select id="" class="form-control">
+              <option selected>Escolher...</option>
+              <option>...</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-3">
+            <label for="">CEP</label>
+            <input
+              type="text"
+              class="form-control"
+              id=""
+              placeholder="CEP do estabelecimento"
+            />
+          </div>
+        </div>
+
+        <hr />
+
+        <!-- Linha da Acessibilidade do Estabelecimento -->
+        <div class="form-row">
+          <div class="form-group col-md-12 text-center">
+            <h5>Acessibilidade do Estabelecimento</h5>
+          </div>
+
+          <div class="form-group col-md-8">
+            <label for="">Rampa de Acesso: </label>
+          </div>
+          <div class="form-group col-md-4">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+
+          <div class="form-group col-md-8">
+            <label for="">Espaço Interno: </label>
+          </div>
+          <div class="form-group col-md-4">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+
+          <div class="form-group col-md-8">
+            <label for="">Banheiro Adaptado: </label>
+          </div>
+          <div class="form-group col-md-4">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+
+          <div class="form-group col-md-8">
+            <label for="">Elevador Acessível: </label>
+          </div>
+          <div class="form-group col-md-4">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+
+          <div class="form-group col-md-12">
+            <label for="">Digite sua opinião sobre o estabelecimento: </label>
+          </div>
+          <div class="form-group col-md-12">
+            <textarea
+              name="Opinião do estabelecimento"
+              id=""
+              cols="97"
+              rows="5"
+            ></textarea>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"
+      ></script>
+    </footer>
+  </body>
+</html>
