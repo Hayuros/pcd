@@ -14,17 +14,18 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="./front/src/css/style.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/global.css" />
     <title>Feed | Pcd em Ação</title>
   </head>
 
   <body>
     <header>
-      <nav
-        class="navbar navbar-expand-lg navbar-light"
-        style="background-color: #144673"
-      >
-        <img src="./front/src/img/Logo.png" />
+      <nav class="navbar navbar-expand-lg">
+        <img
+          src="./github/src/img/Logo.png"
+          alt="Logo do projeto PcD em Ação."
+        />
         <button
           class="navbar-toggler"
           type="button"
@@ -38,12 +39,37 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#"
-              >Home <span class="sr-only">(Página atual)</span></a
-            >
-            <a class="nav-item nav-link" href="#">Destaques</a>
-            <a class="nav-item nav-link" href="#">Preços</a>
-            <a class="nav-item nav-link disabled" href="#">Desativado</a>
+            <a class="nav-item nav-link active" href="#">
+              <i class="bi bi-house-fill">Sobre</i>
+              <span class="sr-only">(Página atual)</span>
+            </a>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Telas
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Login</a>
+                <a class="dropdown-item" href="#">Cadastrar</a>
+                <a class="dropdown-item" href="#">Recuperar Senha</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Feed</a>
+                <a class="dropdown-item" href="#">Perfil</a>
+                <a
+                  class="dropdown-item"
+                  href="./github/src/pages/publicar.html"
+                >
+                  Nova Publicação
+                </a>
+              </div>
+            </li>
           </div>
         </div>
       </nav>

@@ -1,0 +1,38 @@
+/*Variáveis Globais*/
+:root {
+  --bg-nav: #144673;
+  --bg-form: #ebebeb;
+  --bg-dropdown: #4a7ba7;
+}
+
+/*Componentes da tela de nova publicação*/
+nav {
+  background-color: var(--bg-nav);
+  color: white;
+  text-align: center;
+}
+
+form {
+  padding: 1rem;
+  background-color: var(--bg-form);
+  border-radius: 10px;
+}
+a {
+  color: white;
+}
+a:hover {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+img,
+.navbar-toggler {
+  margin: 0 2rem 0 2rem;
+}
+.dropdown-menu {
+  background-color: var(--bg-dropdown);
+}
+.dropdown-menu > a:hover {
+  background-color: transparent;
+}

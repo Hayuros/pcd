@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <!-- Meta tags Obrigatórias -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <!-- Bootstrap CSS -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-
-    <link rel="stylesheet" href="./github/src/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./github/src/css/global.css" />
+    <link rel="stylesheet" href="./github/src/css/publicar.css" />
 
     <title>Sobre | PcD em Ação</title>
   </head>
@@ -24,39 +23,65 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg">
-        <img src="./github/src/img/Logo.png" alt="" />
-
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#"
-                >Sobre <span class="sr-only">(Página atual)</span></a
-              >
-            </li>
+        <img
+          src="./github/src/img/Logo.png"
+          alt="Logo do projeto PcD em Ação."
+        />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Alterna navegação"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">
+              <i class="bi bi-house-fill">Sobre</i>
+              <span class="sr-only">(Página atual)</span>
+            </a>
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
                 href="#"
-                id="navbarDropdownMenuLink"
+                id="navbarDropdown"
                 role="button"
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Páginas
+                Telas
               </a>
-              <div
-                class="dropdown-menu"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
-                <a class="dropdown-item" href="/github/src/pages/nova-pub.html">
-                  Nova Publicação
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item disabled" href="#">
+                  <i class="bi bi-file-person-fill">Login</i>
                 </a>
-                <a class="dropdown-item" href="#">Login</a>
-                <a class="dropdown-item" href="#">Algo mais aqui</a>
+                <a class="dropdown-item disabled" href="#">
+                  <i class="bi bi-person-plus-fill">Cadastre-se</i>
+                </a>
+                <a class="dropdown-item disabled" href="#">Recuperar Senha</a>
+
+                <div class="dropdown-divider"></div>
+
+                <a class="dropdown-item disabled" href="#">
+                  <i class="bi bi-list-stars">Feed</i>
+                </a>
+                <a class="dropdown-item disabled" href="#">
+                  <i class="bi bi-person-circle">Perfil</i>
+                </a>
+                <a
+                  class="dropdown-item"
+                  href="./github/src/pages/publicar.html"
+                >
+                  <i class="bi bi-plus-square-fill">Nova Publicação</i>
+                </a>
               </div>
             </li>
-          </ul>
+          </div>
         </div>
       </nav>
     </header>
