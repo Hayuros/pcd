@@ -1,0 +1,26 @@
+.cad {
+  text-align: center;
+}
+.cad > a {
+  color: black;
+}
+.cad > a:hover {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+form {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--bg-container);
+  border-radius: 1rem;
+}
+button:hover {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.form {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
