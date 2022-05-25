@@ -1,3 +1,9 @@
-.disabled {
-  color: #52f98e;
+button:hover {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+form {
+  padding: 1rem;
+  background-color: var(--bg-container);
+  border-radius: 1rem;
 }

@@ -1,7 +1,7 @@
 /*Variáveis Globais*/
 :root {
   --bg-nav: #144673;
-  --bg-form: #ebebeb;
+  --bg-container: #ebebeb;
   --bg-dropdown: #4a7ba7;
 }
 
@@ -12,11 +12,6 @@ nav {
   text-align: center;
 }
 
-form {
-  padding: 1rem;
-  background-color: var(--bg-form);
-  border-radius: 10px;
-}
 a {
   color: white;
 }

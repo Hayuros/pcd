@@ -1,0 +1,7 @@
+.container {
+  background-color: var(--bg-container);
+  border-radius: 1rem;
+}
+main {
+  padding-top: 1rem;
+}
