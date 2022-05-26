@@ -9,7 +9,7 @@
   --bg-btn-cancelar: #c32732; */
   --bg-btn-salvar: #013d3d;
   --bg-btn-cancelar: #4a2014;
-  /* font-family: "Times New Roman", Times, serif; */
+  --font-padrao: "Roboto", sans-serif;
 }
 
 /*Componentes da tela de nova publicação*/
@@ -21,9 +21,10 @@ nav {
 
 a {
   color: white;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: var(--font-padrao);
 }
 a:hover {
+  font-family: var(--font-padrao);
   color: white;
   font-weight: bold;
   font-size: 1.5rem;
@@ -35,6 +36,7 @@ img,
 }
 .dropdown-menu {
   background-color: var(--bg-dropdown);
+  font-family: var(--font-padrao);
 }
 .dropdown-menu > a:hover {
   background-color: transparent;
