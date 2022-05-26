@@ -3,6 +3,13 @@
   --bg-nav: #144673;
   --bg-container: #ebebeb;
   --bg-dropdown: #4a7ba7;
+  /* --bg-btn-salvar: #688503;
+  --bg-btn-cancelar: #a52b34; */
+  /* --bg-btn-salvar: #6b6805;
+  --bg-btn-cancelar: #c32732; */
+  --bg-btn-salvar: #013d3d;
+  --bg-btn-cancelar: #4a2014;
+  /* font-family: "Times New Roman", Times, serif; */
 }
 
 /*Componentes da tela de nova publicação*/
@@ -14,6 +21,7 @@ nav {
 
 a {
   color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 a:hover {
   color: white;

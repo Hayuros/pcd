@@ -10,3 +10,9 @@ form {
 h2 {
   font-family: "Lobster", cursive;
 }
+.btn-salvar {
+  background-color: var(--bg-btn-salvar);
+}
+.btn-cancelar {
+  background-color: var(--bg-btn-cancelar);
+}
