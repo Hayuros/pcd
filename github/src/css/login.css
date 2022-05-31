@@ -21,3 +21,14 @@ button:hover {
 h2 {
   font-family: "Lobster", cursive;
 }
+.modal-body {
+  background-color: var(--bg-container);
+}
+.modal-body > form {
+  background-color: transparent;
+}
+#btn-cadastrar,
+#btn-recuperar {
+  color: white;
+  background-color: var(--bg-nav);
+}
