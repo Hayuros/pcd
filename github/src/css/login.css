@@ -32,3 +32,6 @@ h2 {
   color: white;
   background-color: var(--bg-nav);
 }
+.modal {
+  border-radius: 15px;
+}

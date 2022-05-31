@@ -18,22 +18,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./github/src/css/global.css" />
-    <link rel="stylesheet" href="./github/src/css/home.css" />
-
-    <title>Sobre | PcD em Ação</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/feed.css  " />
+    <title>Feed | Pcd em Ação</title>
   </head>
 
   <body>
     <header>
       <nav class="navbar navbar-expand-lg">
-        <img
-          src="./github/src/img/Logo.png"
-          alt="Logo do projeto PcD em Ação."
-        />
+        <img src="../img/Logo.png" alt="Logo do projeto PcD em Ação." />
         <button
           class="navbar-toggler"
           type="button"
@@ -47,9 +43,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">
+            <a class="nav-item nav-link active" href="../../../index.html">
               <i class="bi bi-house-fill">Sobre</i>
-              <span class="sr-only">(Página atual)</span>
             </a>
             <li class="nav-item dropdown">
               <a
@@ -64,23 +59,21 @@
                 Telas
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="./github/src/pages/login.html">
+                <a class="dropdown-item" href="./login.html">
                   <i class="bi bi-door-open-fill">Login</i>
                 </a>
 
                 <div class="dropdown-divider"></div>
 
-                <a class="dropdown-item" href="./github/src/pages/feed.html">
+                <a class="dropdown-item disabled" href="#">
                   <i class="bi bi-list-stars">Feed</i>
                 </a>
                 <a class="dropdown-item disabled" href="#">
                   <i class="bi bi-person-circle">Perfil</i>
                 </a>
-                <a
-                  class="dropdown-item"
-                  href="./github/src/pages/publicar.html"
-                >
+                <a class="dropdown-item" href="#">
                   <i class="bi bi-plus-square-fill">Nova Publicação</i>
+                  <span class="sr-only">(Página atual)</span>
                 </a>
               </div>
             </li>
@@ -89,68 +82,36 @@
       </nav>
     </header>
 
-    <main class="text-center m-lg-5">
-      <div class="container p-5 shadow-lg">
+    <main>
+      <div class="container m-md-5">
         <div class="row">
           <div class="col-md-6">
-            <h3>Sobre o TCS</h3>
-            <p>
-              Trabalho apresentado à Faculdade de Tecnologia Senac Joinville
-              como requisito parcial para o desenvolvimento do Trabalho de
-              Conclusão de Semestre (TCS), do curso de Tecnólogo em Análise e
-              Desenvolvimento de Sistemas.
-            </p>
+            <form class="form-inline my-2 my-lg-0">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Pesquisar"
+                aria-label="Pesquisar"
+              />
+              <button
+                class="btn btn-outline-success my-2 my-sm-0"
+                type="submit"
+              >
+                Pesquisar
+              </button>
+            </form>
+            <div class="container bg-danger m-md-5">
+              <h4>asdfa</h4>
+            </div>
           </div>
           <div class="col-md-6">
-            <img
-              class="rounded mx-auto d-block img-fluid"
-              src="https://senacblog.s3.sa-east-1.amazonaws.com/wp-content/uploads/2018/06/25092146/inform%C3%A1tica.jpg"
-              alt="imagem sobre tcs."
-            />
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6">
-            <img
-              class="rounded mx-auto d-block img-fluid"
-              src="https://senacblog.s3.sa-east-1.amazonaws.com/wp-content/uploads/2018/06/25092146/inform%C3%A1tica.jpg"
-              alt="imagem sobre tcs."
-            />
-          </div>
-          <div class="col-md-6">
-            <h3>Sobre a Equipe</h3>
-            <p>
-              Formada pelos Alunos: Hayuros, Ricardo, Rodrigo e Luiz Paulo Nossa
-              equipe visa a inclusão de Pessoas com Deficiência, através da
-              acessibilidade nos estabelecimentos sendo eles públicos ou
-              particulares.
-            </p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6">
-            <h3>Sobre o Projeto</h3>
-            <p>
-              O projeto visa uma rede social voltada para a acessibilidade
-              destas pessoas. Com tecnologias de acessibilidade
-            </p>
-          </div>
-          <div class="col-md-6">
-            <img
-              class="rounded mx-auto d-block img-fluid"
-              src="./github/src/img/Logo.png"
-              alt="imagem sobre tcs."
-            />
+            <img src="../img/map.png" alt="" class="h-auto w-auto" />
           </div>
         </div>
       </div>
     </main>
 
     <footer>
-      <!-- JavaScript (Opcional) -->
-      <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
       <script
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
