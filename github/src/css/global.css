@@ -10,8 +10,11 @@
   --bg-btn-salvar: #013d3d;
   --bg-btn-cancelar: #4a2014;
   --font-padrao: "Roboto", sans-serif;
+  --bg-padrao: #dfedf2;
 }
-
+body {
+  background-color: var(--bg-padrao);
+}
 /*Componentes da tela de nova publicação*/
 nav {
   background-color: var(--bg-nav);
