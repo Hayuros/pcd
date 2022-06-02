@@ -1,0 +1,22 @@
+.container {
+  background-color: var(--bg-container);
+  border-radius: 1rem;
+}
+.btn {
+  background-color: var(--bg-nav);
+  color: white;
+}
+.modal-body {
+  background-color: var(--bg-container);
+}
+.modal-body > form {
+  background-color: transparent;
+}
+#btn-cadastrar,
+#btn-recuperar {
+  color: white;
+  background-color: var(--bg-nav);
+}
+.modal {
+  border-radius: 15px;
+}

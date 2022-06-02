@@ -2,9 +2,9 @@
   background-color: var(--bg-container);
   border-radius: 1rem;
 }
-main {
-  padding-top: 1rem;
-}
 h3 {
   font-family: "Lobster", cursive;
+}
+.row {
+  background-color: var(--bg-container);
 }
