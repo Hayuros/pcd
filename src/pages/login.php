@@ -58,7 +58,7 @@
                 Telas
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="./github/src/pages/login.html">
+                <a class="dropdown-item" href="#">
                   <i class="bi bi-door-open-fill">Login</i>
                   <span class="sr-only">(Página atual)</span>
                 </a>
@@ -89,7 +89,7 @@
       <div class="container">
         <h2 class="text-center m-md-5">PcD em Ação</h2>
         <div class="col-md-6 form m-md-auto">
-          <form action="" method="post" name="login" class="m-lg-5 shadow-lg">
+          <form class="m-lg-5 shadow-lg">
             <div class="form-row">
               <div class="form-group col-md-12">
                 <h5 class="text-center">Fazer Login</h5>
@@ -119,7 +119,7 @@
 
             <div class="form-row">
               <div class="form-group col-md-12">
-                <button class="btn btn-block btn-primary disabled">
+                <button class="btn btn-block btn-primary disabled" actio>
                   Login
                 </button>
               </div>
