@@ -2,16 +2,9 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./src/css/global.css" />
+  <?php
+  include("./src/components/head.php");
+  ?>
   <link rel="stylesheet" href="./src/css/home.css" />
 
   <title>Sobre | PcD em Ação</title>
@@ -24,46 +17,58 @@
     ?>
   </header>
 
-  <main class="text-center">
-    <div class="container m-lg-auto p-5 shadow-lg">
-      <div class="row">
+  <main class="text-center m-lg-5">
+    <div class="container p-5 shadow-lg">
+      <div class="row my-2">
         <div class="col-md-6">
           <h3>Sobre o TCS</h3>
-          <p>colocar o texto</p>
+          <p>
+            Trabalho de Conclusão de Curso, desenvolvido na Faculdade Senac de
+            Joinville, no curso de Tecnólogo em Análise e Desenvolvimento de
+            Sistemas.
+          </p>
         </div>
         <div class="col-md-6">
-          <img src="" alt="imagem sobre tcs." />
+          <img class="rounded mx-auto d-block img-fluid my-2" src="https://senacblog.s3.sa-east-1.amazonaws.com/wp-content/uploads/2018/06/25092146/inform%C3%A1tica.jpg" alt="imagem sobre tcs." />
         </div>
       </div>
 
-      <div class="row">
+      <div class="row my-2">
         <div class="col-md-6">
-          <img src="" alt="imagem da equipe." />
+          <img class="rounded mx-auto d-block img-fluid my-2" src="https://senacblog.s3.sa-east-1.amazonaws.com/wp-content/uploads/2018/06/25092146/inform%C3%A1tica.jpg" alt="imagem sobre tcs." />
         </div>
         <div class="col-md-6">
           <h3>Sobre a Equipe</h3>
-          <p>colocar o texto</p>
+          <p>
+            Formada pelos Alunos: Hayuros, Ricardo, Rodrigo e Luiz Paulo.
+            Nossa equipe visa a inclusão de Pessoas com Deficiência, através
+            da acessibilidade nos estabelecimentos, sendo eles públicos ou
+            particulares.
+          </p>
         </div>
       </div>
 
-      <div class="row">
+      <div class="row my-2">
         <div class="col-md-6">
           <h3>Sobre o Projeto</h3>
-          <p>colocar o texto</p>
+          <p>
+            O projeto propõe uma rede social voltada para a acessibilidade
+            destas pessoas. A Rede Social possui classificação por tipo de
+            deficiência, para que futuramente seja mais fácil de encontrar os
+            estabelecimentos com a acessibilidade desejável.
+          </p>
         </div>
-        <div class="col-md-6">
-          <img src="" alt="imagem ou logo do projeto." />
+        <div class="col-md-6 img">
+          <img class="rounded mx-auto d-block img-fluid my-2" src="src/img/Logo.png" alt="imagem sobre tcs." />
         </div>
       </div>
     </div>
   </main>
 
   <footer>
-    <!-- JavaScript (Opcional) -->
-    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <?php
+    include("src/components/footer.php");
+    ?>
   </footer>
 </body>
 

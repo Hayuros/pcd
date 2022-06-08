@@ -13,13 +13,9 @@
                     Telas
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../pages/login.php">
+                    <a class="dropdown-item" href="src/pages/login.php">
                         <i class="bi bi-door-open-fill">Login</i>
                     </a>
-                    <a class="dropdown-item disabled" href="#">
-                        <i class="bi bi-person-plus-fill">Cadastre-se</i>
-                    </a>
-                    <a class="dropdown-item disabled" href="#">Recuperar Senha</a>
 
                     <div class="dropdown-divider"></div>
 
@@ -29,9 +25,8 @@
                     <a class="dropdown-item disabled" href="#">
                         <i class="bi bi-person-circle">Perfil</i>
                     </a>
-                    <a class="dropdown-item" href="../pages/publicar.php">
+                    <a class="dropdown-item" href="src/pages/publicar.php">
                         <i class="bi bi-plus-square-fill">Nova Publicação</i>
-                        <span class="sr-only">(Página atual)</span>
                     </a>
                 </div>
             </li>
