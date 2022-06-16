@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,4 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::namespace("Login")->group(function () {
     Route::get("/", [LoginController::class, "index"]);
     Route::get("/Sobre", [LoginController::class, "sobre"]);
+});
+
+Route::namespace("Logado")->group(function () {
+    Route::get("/Feed", [UsuarioController::class, 'index']);
 });
