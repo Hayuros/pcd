@@ -4,19 +4,15 @@
 require_once './conexao.php';
 
   $nome = $_POST['nome'];
-  $email = $_POST['email'];
   $senha = $_POST['senha'];
-  
+  $email = $_POST['email'];
   
      
   if($nome == ""){
     echo 'Preencha o campo nome';
        exit();
      }
-         if($email == ""){
-         echo 'Preencha o campo email';
-         exit();
-     }
+ 
       if($senha == ""){
         echo 'Preencha o campo senha';
          exit();
@@ -28,20 +24,30 @@ require_once './conexao.php';
          exit();
      }
 
-     $res = $pdo->query("SELECT * FROM usuario where nome = '$_POST[nome]'"); 
+     if($email == ""){
+      echo 'Preencha o campo email';
+      exit();
+  }
+
+    
+
+   
+
+     $res = $conn->query("SELECT * FROM usuario where nome = '$_POST[nome]'"); 
       $dados = $res->fetchAll(PDO::FETCH_ASSOC);
       if(@count($dados) == 0){
 
-	$res = $pdo->prepare("INSERT into usuario (nome, email, senha, Cliente ) values (:nome, :email, :senha,  :Cliente)");
+	$res = $conn->prepare("INSERT into usuario (nome,  senha, email, status, idCategoria ) values (:nome,  :senha, :email, :status, :idCategoria)");
 	$res->bindValue(":nome", $nome);
+  $res->bindValue(":senha", $senha);
 	$res->bindValue(":email", $email);
-	$res->bindValue(":senha", $senha);
-	$res->bindValue(":status", 'Cliente');
+	$res->bindValue(":status", $status);
+  $res->bindValue(":idCategoria", $idCategoria);
 
 	$res->execute();
+ 
 
-
-	$res = $pdo->prepare("INSERT into clientes (nome, email) values (:nome, :email)");
+	$res = $conn->prepare("INSERT into status (nome, email) values (:nome, :email)");
 	$res->bindValue(":nome", $nome);
 	$res->bindValue(":email", $email);
 
@@ -49,10 +55,10 @@ require_once './conexao.php';
 	$res->execute();
 
 
-	$res = $pdo->query("SELECT * FROM emails where email = '$email'"); 
+	$res = $conn->prepare("SELECT * FROM emails where email = '$email'"); 
 	$dados = $res->fetchAll(PDO::FETCH_ASSOC);
 	if(@count($dados) == 0){
-	$res = $pdo->prepare("INSERT into emails (nome, email, ativo) values (:nome, :email, :ativo)");
+	$res = $conn->prepare("INSERT into emails (nome, email, ativo) values (:nome, :email, :ativo)");
 	$res->bindValue(":nome", $nome);
 	$res->bindValue(":email", $email);
 	$res->bindValue(":ativo", "Sim");
