@@ -6,7 +6,8 @@ require_once './conexao.php';
   $nome = $_POST['nome'];
   $senha = $_POST['senha'];
   $email = $_POST['email'];
-  
+  $status = $_POST['status'];
+  $idCategoria = $_POST['idCategoria'];  
      
   if($nome == ""){
     echo 'Preencha o campo nome';
@@ -28,6 +29,16 @@ require_once './conexao.php';
       echo 'Preencha o campo email';
       exit();
   }
+    if($status == ""){
+      echo 'Preencha o campo status';
+      exit();
+  }
+
+      if($idCategoria == ""){
+      echo 'Preencha o campo categoria';
+      exit();
+}
+
 
     
 
