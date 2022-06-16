@@ -1,0 +1,30 @@
+/*Variáveis Globais*/
+:root {
+    --bg-nav: #144673;
+    --bg-container: #ebebeb;
+    --bg-dropdown: #4a7ba7;
+}
+* {
+    font-family: "Roboto";
+}
+/*Componentes da tela de nova publicação*/
+nav {
+    background-color: var(--bg-nav);
+    text-align: center;
+}
+.nav-item {
+    color: white;
+}
+.nav-item:hover {
+    color: white;
+}
+a {
+    color: black;  
+}
+a {
+    color: black;
+}
+img,
+.navbar-toggler {
+    margin: 0 2rem 0 2rem;
+}

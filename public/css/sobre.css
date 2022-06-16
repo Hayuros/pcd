@@ -1,0 +1,7 @@
+.container {
+    background-color: var(--bg-container);
+    border-radius: 1rem;
+}
+.row {
+    background-color: var(--bg-container);
+}

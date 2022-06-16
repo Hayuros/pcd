@@ -1,0 +1,9 @@
+.cad {
+    text-align: center;
+}
+
+form {
+    padding: 1rem;
+    background-color: var(--bg-container);
+    border-radius: 1rem;
+}
