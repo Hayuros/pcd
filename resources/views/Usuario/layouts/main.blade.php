@@ -44,7 +44,7 @@
                         <i class="bi bi-plus-square"></i>
                         <p>Novo Estabelecimento</p>
                     </a>
-                    <a class="nav-item nav-link p-1" href="/">
+                    <a class="nav-item nav-link p-1" href="/Cadastrar-Postagem">
                         <i class="bi bi-plus-square"></i>
                         <p>Nova Postagem</p>
                     </a>

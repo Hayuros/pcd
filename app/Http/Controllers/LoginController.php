@@ -17,7 +17,7 @@ class LoginController extends Controller
         return view("Login.login");
     }
 
-    public function sobre()
+    public function sobre(Request $request)
     {
         return view("Login.sobre");
     }

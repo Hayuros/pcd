@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PostagemController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,4 +23,8 @@ Route::namespace("Login")->group(function () {
 
 Route::namespace("Logado")->group(function () {
     Route::get("/Feed", [UsuarioController::class, 'index']);
+});
+
+Route::namespace("Cadastros")->group(function () {
+    Route::get("/Cadastrar-Postagem", [PostagemController::class, 'index']);
 });
