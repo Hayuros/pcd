@@ -1,0 +1,21 @@
+.container {
+    background-color: var(--bg-container);
+    border-radius: 1rem;
+}
+
+// Modal de Edição de Perfil
+.modal {
+    border-radius: 15px;
+}
+
+.modal-body {
+    background-color: var(--bg-container);
+
+    form {
+        background-color: transparent;
+    }
+
+    label {
+        padding-top: 0.5rem;
+    }
+}

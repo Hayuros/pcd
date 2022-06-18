@@ -7,8 +7,13 @@ use Illuminate\Http\Request;
 class PostagemController extends Controller
 {
     //
-    public function index(Request $request)
+    public function index()
     {
-        return view("Postagem.publicar");
+        return view("Cadastros.postagem");
+    }
+
+    public function exibirPostagem()
+    {
+        return view("Exibir.postagem");
     }
 }

@@ -34,7 +34,7 @@
                     <div class="card-body">
                         <div class="card-deck">
                             <div class="card-text col-md-12">
-                                <h6>Endereço:</h6>
+                                <p>Endereço:</p>
                             </div>
                             <div class="card-text col-md-6">
                                 <p>Espaço Externo:</p>
@@ -49,9 +49,9 @@
                         </div>
                     </div>
                     <div class="card-footer text-center">
-                        <button type="button" class="btn btn-link">
+                        <a type="button" class="btn btn-link" href="/Exibir/Postagem/">
                             Ver Mais <i class="bi bi-caret-right-fill"></i>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

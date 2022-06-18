@@ -36,17 +36,25 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link p-1" href="/Feed">
+                    <a class="nav-item nav-link p-2" href="/Feed">
                         <i class="bi bi-card-list"></i>
                         <p>Postagens</p>
                     </a>
-                    <a class="nav-item nav-link p-1" href="/CadastrarEstabelecimento">
+                    <a class="nav-item nav-link p-2" href="/Cadastrar/Estabelecimento">
                         <i class="bi bi-plus-square"></i>
                         <p>Novo Estabelecimento</p>
                     </a>
-                    <a class="nav-item nav-link p-1" href="/Cadastrar-Postagem">
+                    <a class="nav-item nav-link p-2" href="/Cadastrar/Postagem">
                         <i class="bi bi-plus-square"></i>
                         <p>Nova Postagem</p>
+                    </a>
+                    <a class="nav-item nav-link p-2" href="/Cadastrar/Categoria">
+                        <i class="bi bi-plus-square"></i>
+                        <p>Nova Categoria</p>
+                    </a>
+                    <a class="nav-item nav-link p-2" href="/Perfil">
+                        <i class="bi bi-person-circle"></i>
+                        <p>Perfil</p>
                     </a>
                 </div>
                 <button type="button" class="btn btn-white">Login</button>
