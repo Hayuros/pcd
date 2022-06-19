@@ -52,8 +52,8 @@
         aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title text-center">Cadastre-se</h5>
+                <div class="modal-header text-center">
+                    <h5 class="modal-title">Cadastre-se</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -62,40 +62,38 @@
                     <form class="m-md-5 h-auto w-auto justify-content-center container-fluid">
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <label for="exampleInputEmail1">Nome Completo</label>
+                                <label for="nome">Nome Completo</label>
                                 <input type="text" class="form-control" id="nome" name="nome"
                                     placeholder="Insira o nome e Sobrenome" />
 
-                                <label for="exampleInputEmail1">Email</label>
+                                <label for="email">Email</label>
                                 <input type="email" class="form-control" id="email" name="email"
                                     placeholder="Seu Email" />
 
                                 <label for="categoria">Categoria</label>
-                                <select name="" id="" class="form-control">
-                                    <option value="as">asfas</option>
+                                <select name="categoria" id="categoria" class="form-control">
+                                    @foreach ($categorias as $categoria)
+                                        <option value="{{ $categoria->idCategoria }}">{{ $categoria->nome }}</option>
+                                    @endforeach
                                 </select>
                             </div>
-                            <div class="form-group col-md-6">
-                                <label for="exampleInputEmail1">Senha</label>
+                            <div class="form-group col-md-12">
+                                <label for="senha">Senha</label>
                                 <input type="password" class="form-control" id="senha" name="senha"
                                     placeholder="Inserir Senha" />
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="exampleInputEmail1">Confirmar Senha</label>
-                                <input type="password" class="form-control" id="confirmar-senha" name="confirmar-senha"
-                                    placeholder="Confirmar Senha" />
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="btn-fechar-cadastrar" class="btn btn-secondary" data-dismiss="modal">
+                    <button type="submit" value="Cadastrar Usuário" id="btn-fechar-cadastrar" class="btn btn-secondary"
+                        data-dismiss="modal">
                         Fechar
                     </button>
 
-                    <button type="button" id="btn-cadastrar" class="btn btn-info">
+                    <a type="cancel" id="btn-cadastrar" value="Fechar Modal de Cadastro" class="btn btn-info">
                         Cadastrar
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>

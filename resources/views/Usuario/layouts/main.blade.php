@@ -57,12 +57,26 @@
                         <p>Perfil</p>
                     </a>
                 </div>
-                <button type="button" class="btn btn-white">Login</button>
+                @auth
+                    <form action="/logout" method="POST">
+                        @csrf
+                        <a type="button" class="btn btn-white"
+                            onclick="event.preventDefault(); 
+                                this.closest('form').submit();">
+                            Sair
+                        </a>
+                    </form>
+                @endauth
             </div>
         </nav>
     </header>
 
     <main>
+
+        @if (session('msg'))
+            <p class="msg">{{ session('msg') }}</p>
+        @endif
+
         @yield('content')
 
         <div vw class="enabled">

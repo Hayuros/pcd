@@ -18,7 +18,7 @@ class UsuarioController extends Controller
 
     public function listaPostagens()
     {
-        return view('Listagens.postagens');
+        return view('Listagens.postagens'); 
     }
 }
     

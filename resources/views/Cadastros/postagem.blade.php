@@ -16,24 +16,26 @@
 
         <div class="form-row">
             <div class="form-group col-md-2">
-                <label for="">Estabelecimento</label>
+                <label for="estabelecimento">Estabelecimento</label>
             </div>
             <div class="form-group col-md-10">
-                <select id="" class="form-control">
-                    <option selected>Escolher...</option>
-                    <option>...</option>
+                <select name="estabelecimento" id="estabelecimento" class="form-control">
+                    @foreach ($estabelecimentos as $estabelecimento)
+                        <option value="{{ $estabelecimento->idEstabelecimento }}">{{ $estabelecimento->nome }}</option>
+                    @endforeach
                 </select>
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-2">
-                <label for="">Categoria</label>
+                <label for="categoria">Categoria</label>
             </div>
             <div class="form-group col-md-10">
-                <select id="" class="form-control">
-                    <option selected>Escolher...</option>
-                    <option>...</option>
+                <select name="categoria" id="categoria" class="form-control">
+                    @foreach ($categorias as $categoria)
+                        <option value="{{ $categoria->idCategoria }}">{{ $categoria->nome }}</option>
+                    @endforeach
                 </select>
             </div>
         </div>

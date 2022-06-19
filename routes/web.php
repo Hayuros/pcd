@@ -24,14 +24,19 @@ Route::namespace("Login")->group(function () {
 });
 
 Route::namespace("Usuario")->group(function () {
-    Route::get("/Feed", [UsuarioController::class, 'index']);
     Route::get("/Perfil", [UsuarioController::class, "perfil"]);
 });
 
 Route::namespace("Cadastros")->group(function () {
     Route::get("/Cadastrar/Postagem", [PostagemController::class, 'index']);
+
+    //Rotas para Cadastro de Estabelecimentos
     Route::get("/Cadastrar/Estabelecimento", [EstabelecimentoController::class, 'index']);
+    Route::post('/Estabelecimentos', [EstabelecimentoController::class, 'store']);
+
+    // Rotas para Cadastro de Categorias
     Route::get("/Cadastrar/Categoria", [CategoriaController::class, 'index']);
+    Route::post("/Categorias", [CategoriaController::class, "store"]);
 });
 
 Route::namespace("Listagens")->group(function () {
@@ -41,4 +46,12 @@ Route::namespace("Listagens")->group(function () {
 
 Route::namespace("Exibir")->group(function () {
     Route::get("Exibir/Postagem/", [PostagemController::class, 'exibirPostagem']);
+});
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', [UsuarioController::class, 'index']);
 });

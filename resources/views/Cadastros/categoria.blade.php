@@ -5,7 +5,8 @@
 @section('style', '/css/cadastros.scss')
 
 @section('content')
-    <form class="m-md-5 shadow-lg">
+    <form action="/Categorias" method="POST" class="m-md-5 shadow-lg">
+        @csrf
         <div class="form-row">
             <div class="form-group col-md-12">
                 <h2 class="text-center m-md-5">Nova Categoria de Deficiência</h2>
@@ -14,30 +15,32 @@
 
         <div class="form-row">
             <div class="form-group col-md-2">
-                <label for="">Nome:</label>
+                <label for="nome">Nome:</label>
             </div>
             <div class="form-group col-md-10">
-                <input type="text" class="form-control">
+                <input type="text" name="nome" id="nome" placeholder="Nome da Categoria" class="form-control"
+                    required>
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-2">
-                <label for="">Descrição:</label>
+                <label for="descricao">Descrição:</label>
             </div>
             <div class="form-group col-md-10">
-                <input type="text" class="form-control">
+                <input type="text" name="descricao" id="descricao" placeholder="Descrição da Categoria"
+                    class="form-control" required>
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-12 text-center">
-                <button type="button" class="btn btn-salvar btn-lg">
+                <button type="submit" value="Cadastrar Categoria" class="btn btn-salvar btn-lg">
                     <i class="bi bi-check-all">Salvar</i>
                 </button>
-                <button type="button" class="btn btn-cancelar btn-lg">
+                <a type="cancel" class="btn btn-cancelar btn-lg" href="/Feed" value="Cancelar Cadastro">
                     <i class="bi bi-trash">Cancelar</i>
-                </button>
+                </a>
             </div>
         </div>
     </form>
