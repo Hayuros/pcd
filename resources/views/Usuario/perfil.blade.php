@@ -25,7 +25,7 @@
                 <h3>Senha: </h3>
             </div>
             <div class="col-md-6">
-                <h3>Nome da Pessoa</h3>
+                <h3>{{ $usuario->name }}</h3>
                 <h3>E-mail: </h3>
                 <h3>Categoria da Deficiência: </h3>
                 <h3>Senha: </h3>

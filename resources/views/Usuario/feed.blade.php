@@ -18,43 +18,49 @@
                 </form>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card my-2 w-auto">
-                    <div class="card-header">
-                        <h5 class="card-title">
-                            Nome do Estabelecimento
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-fill text-warning"></i>
-                            <i class="bi bi-star-half text-warning"></i>
-                            <i class="bi bi-star text-warning"></i>
-                        </h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-deck">
-                            <div class="card-text col-md-12">
-                                <p>Endereço:</p>
-                            </div>
-                            <div class="card-text col-md-6">
-                                <p>Espaço Externo:</p>
-                                <p>Rampas de Acesso:</p>
-                                <p>Estacionamento Especial:</p>
-                            </div>
-                            <div class="card-text col-md-6">
-                                <p>Espaço Interno:</p>
-                                <p>Banheiro Adaptado:</p>
-                                <p>Caixa Acessível:</p>
+        @foreach ($postagens as $postagen)
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card my-2 w-auto">
+                        <div class="card-header">
+                            <h5 class="card-title">
+                                @foreach ($estabelecimentos as $estabelecimento)
+                                    <h5>{{ $estabelecimento->nome }}</h5>
+                                @endforeach
+                                @foreach ($acessibilidades as $acessibilidade)
+                                    @for ($i = 0; $i < $acessibilidade->qtdEstrelas; $i++)
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                    @endfor
+                                @endforeach
+
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-deck">
+                                <div class="card-text col-md-12">
+                                    @foreach ($acessibilidades as $acessibilidade)
+                                        <p>{{ $acessibilidade->nome }}</p>
+                                        @for ($i = 0; $i < $acessibilidade->qtdEstrelas; $i++)
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                        @endfor
+                                    @endforeach
+                                </div>
+
+                                <div class="card-text col-md-12">
+                                    @foreach ($categorias as $categoria)
+                                        <p>{{ $categoria->nome }}</p>
+                                    @endforeach
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-footer text-center">
-                        <a type="button" class="btn btn-link" href="/Exibir/Postagem/">
-                            Ver Mais <i class="bi bi-caret-right-fill"></i>
-                        </a>
+                        <div class="card-footer text-center">
+                            <a type="button" class="btn btn-link" href="/Exibir/Postagem/">
+                                Ver Mais <i class="bi bi-caret-right-fill"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        @endforeach
     </div>
 @endsection

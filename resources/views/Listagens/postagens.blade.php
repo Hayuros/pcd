@@ -7,23 +7,27 @@
     <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">Imagem</th>
                 <th scope="col">Estabelecimento</th>
                 <th scope="col">Categoria</th>
                 <th scope="col">Ações</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td scope="row">img</td>
-                <td>Estabelecimento</td>
-                <td>Categoria</td>
-                <td>
-                    <a href="" class="btn btn-cancelar">
-                        <i class="bi bi-trash">Excluir</i>
-                    </a>
-                </td>
-            </tr>
+            @foreach ($postagens as $postagem)
+                @foreach ($estabelecimentos as $estabelecimento)
+                    @foreach ($categorias as $categoria)
+                        <tr>
+                            <td>{{ $estabelecimento->nome }}</td>
+                            <td>{{ $categoria->nome }}</td>
+                            <td>
+                                <a href="" class="btn btn-cancelar">
+                                    <i class="bi bi-trash">Excluir</i>
+                                </a>
+                            </td>
+                        </tr>
+                    @endforeach
+                @endforeach
+            @endforeach
         </tbody>
     </table>
 @endsection

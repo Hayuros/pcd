@@ -6,7 +6,8 @@
 
 @section('content')
     <h2 class="text-center m-md-5">Nova Publicação</h2>
-    <form action="/Acessibilidades" method="POST" class="m-lg-5 shadow-lg">
+    <form action="/Postagens" method="POST" class="m-lg-5 shadow-lg">
+        @csrf
         <!-- Linha do Endereço do Estabelecimento -->
         <div class="form-row">
             <div class="form-group col-md-12 text-center">
@@ -21,7 +22,8 @@
             <div class="form-group col-md-10">
                 <select name="estabelecimento" id="estabelecimento" class="form-control">
                     @foreach ($estabelecimentos as $estabelecimento)
-                        <option value="{{ $estabelecimento->idEstabelecimento }}">{{ $estabelecimento->nome }}</option>
+                        <option value="{{ $idEstabelecimento = $estabelecimento->id }}">{{ $estabelecimento->nome }}
+                        </option>
                     @endforeach
                 </select>
             </div>
@@ -34,7 +36,7 @@
             <div class="form-group col-md-10">
                 <select name="categoria" id="categoria" class="form-control">
                     @foreach ($categorias as $categoria)
-                        <option value="{{ $categoria->idCategoria }}">{{ $categoria->nome }}</option>
+                        <option value="{{ $idCategoria = $categoria->id }}">{{ $categoria->nome }}</option>
                     @endforeach
                 </select>
             </div>
@@ -69,8 +71,6 @@
                         @for ($i = 0; $i < $acessibilidade->qtdEstrelas; $i++)
                             <option value="{{ $i }}">{{ $i }}</option>
                         @endfor
-                        <option selected>Escolher...</option>
-
                     </select>
                 </div>
             @endforeach
@@ -83,13 +83,13 @@
                 <label for="">Digite sua opinião sobre o estabelecimento: </label>
             </div>
             <div class="form-group col-md-8">
-                <textarea name="Opinião do estabelecimento" id="" cols="10" rows="5" class="form-control"></textarea>
+                <textarea name="descricao" id="descricao" cols="10" rows="5" class="form-control"></textarea>
             </div>
         </div>
 
         <div class="form-row">
             <div class="form-group col-md-12 text-center">
-                <button type="button" class="btn btn-salvar btn-lg">
+                <button type="submit" class="btn btn-salvar btn-lg">
                     <i class="bi bi-check-all">Salvar</i>
                 </button>
                 <button type="button" class="btn btn-cancelar btn-lg">
