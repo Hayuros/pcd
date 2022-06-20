@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AcessibilidadeController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\EstabelecimentoController;
 use App\Http\Controllers\LoginController;
@@ -37,6 +38,10 @@ Route::namespace("Cadastros")->group(function () {
     // Rotas para Cadastro de Categorias
     Route::get("/Cadastrar/Categoria", [CategoriaController::class, 'index']);
     Route::post("/Categorias", [CategoriaController::class, "store"]);
+
+    //Rotas para Cadastro de Acessibilidade
+    Route::get('/Cadastrar/Acessibilidade', [AcessibilidadeController::class, 'index']);
+    Route::post('Acessibilidades', [AcessibilidadeController::class, 'store']);
 });
 
 Route::namespace("Listagens")->group(function () {

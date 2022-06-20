@@ -19,10 +19,10 @@ class CategoriaController extends Controller
         $categoria = new Categoria;
 
         $categoria->nome = $request->nome;
-        $categoria->descricao = $request->descricao;
-        
+        $categoria->descricao = $request->descricao;    
+
         $categoria->save();
 
-        return redirect("/Feed")->with('msg', "Categoria criada com Sucesso!");
+        return redirect("/dashboard")->with('msg', "Categoria criada com Sucesso!");
     }
 }

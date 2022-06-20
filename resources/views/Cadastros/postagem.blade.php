@@ -6,7 +6,7 @@
 
 @section('content')
     <h2 class="text-center m-md-5">Nova Publicação</h2>
-    <form class="m-lg-5 shadow-lg">
+    <form action="/Acessibilidades" method="POST" class="m-lg-5 shadow-lg">
         <!-- Linha do Endereço do Estabelecimento -->
         <div class="form-row">
             <div class="form-group col-md-12 text-center">
@@ -40,7 +40,7 @@
             </div>
         </div>
 
-        <div class="form-row">
+        {{-- <div class="form-row">
             <div class="form-group col-md-2">
                 <label for="">Adicionar imagem: </label>
 
@@ -48,7 +48,7 @@
             <div class="form-group col-md-10">
                 <input type="file" />
             </div>
-        </div>
+        </div> --}}
 
         <hr />
 
@@ -60,52 +60,23 @@
         </div>
 
         <div class="form-row">
-            <div class="form-group col-md-8">
-                <label for="">Rampa de Acesso: </label>
-            </div>
-            <div class="form-group col-md-4">
-                <select id="" class="form-control">
-                    <option selected>Escolher...</option>
-                    <option>...</option>
-                </select>
-            </div>
+            @foreach ($acessibilidades as $acessibilidade)
+                <div class="form-group col-md-8">
+                    <label for="acessibilidade">{{ $acessibilidade->nome }}</label>
+                </div>
+                <div class="form-group col-md-4">
+                    <select id="" class="form-control">
+                        @for ($i = 0; $i < $acessibilidade->qtdEstrelas; $i++)
+                            <option value="{{ $i }}">{{ $i }}</option>
+                        @endfor
+                        <option selected>Escolher...</option>
+
+                    </select>
+                </div>
+            @endforeach
         </div>
 
-        <div class="form-row">
-            <div class="form-group col-md-8">
-                <label for="">Espaço Interno: </label>
-            </div>
-            <div class="form-group col-md-4">
-                <select id="" class="form-control">
-                    <option selected>Escolher...</option>
-                    <option>...</option>
-                </select>
-            </div>
-        </div>
 
-        <div class="form-row">
-            <div class="form-group col-md-8">
-                <label for="">Banheiro Adaptado: </label>
-            </div>
-            <div class="form-group col-md-4">
-                <select id="" class="form-control">
-                    <option selected>Escolher...</option>
-                    <option>...</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="form-row">
-            <div class="form-group col-md-8">
-                <label for="">Elevador Acessível: </label>
-            </div>
-            <div class="form-group col-md-4">
-                <select id="" class="form-control">
-                    <option selected>Escolher...</option>
-                    <option>...</option>
-                </select>
-            </div>
-        </div>
 
         <div class="form-row">
             <div class="form-group col-md-12">

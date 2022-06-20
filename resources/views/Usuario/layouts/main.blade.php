@@ -36,7 +36,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link p-2" href="/Feed">
+                    <a class="nav-item nav-link p-2" href="/dashboard">
                         <i class="bi bi-card-list"></i>
                         <p>Postagens</p>
                     </a>
@@ -51,6 +51,10 @@
                     <a class="nav-item nav-link p-2" href="/Cadastrar/Categoria">
                         <i class="bi bi-plus-square"></i>
                         <p>Nova Categoria</p>
+                    </a>
+                    <a class="nav-item nav-link p-2" href="/Cadastrar/Acessibilidade">
+                        <i class="bi bi-plus-square"></i>
+                        <p>Nova Acessibilidade</p>
                     </a>
                     <a class="nav-item nav-link p-2" href="/Perfil">
                         <i class="bi bi-person-circle"></i>
