@@ -91,45 +91,48 @@
             <h5>Sobre o Estabelecimento:</h5>
           </div>
           <div class="form-group col-md-9 p-5">
-            <label for="">Estabelecimento</label>
+            <label for="estabelecimento">Estabelecimento</label>
             <input
               type="text"
               class="form-control"
-              id=""
+              id="estabelecimento"
+              name="estabelecimento"
               placeholder="Nome do Estabelecimento"
             />
 
-            <label for="">Categoria</label>
-            <select id="" class="form-control">
+            <label for="categoria">Categoria</label>
+            <select id="categoria" name="categoria" class="form-control">
               <option selected>Escolher...</option>
               <option>...</option>
             </select>
 
-            <label for="">Endereço</label>
+            <label for="endereco">Endereço</label>
             <input
               type="text"
               class="form-control"
-              id=""
+              id="endereco"
+              name="endereco"
               placeholder="Endereço do Estabelecimento"
             />
 
-            <label for="">Cidade</label>
-            <select id="" class="form-control">
+            <label for="cidade">Cidade</label>
+            <select id="cidade" name="cidade" class="form-control">
               <option selected>Escolher...</option>
               <option>...</option>
             </select>
 
-            <label for="">Estado</label>
-            <select id="" class="form-control">
+            <label for="estado">Estado</label>
+            <select id="estado" name="estado" class="form-control">
               <option selected>Escolher...</option>
               <option>...</option>
             </select>
 
-            <label for="">CEP</label>
+            <label for="cep">CEP</label>
             <input
               type="text"
               class="form-control"
-              id=""
+              id="cep"
+              name="cep"
               placeholder="CEP do estabelecimento"
             />
           </div>
@@ -175,7 +178,7 @@
           </div>
 
           <div class="form-group col-md-8">
-            <label for="">Rampa de Acesso: </label>
+            <label for="rampa-de-acesso">Rampa de Acesso: </label>
           </div>
           <div class="form-group col-md-4">
             <i class="bi bi-star-fill"></i>
@@ -186,7 +189,7 @@
           </div>
 
           <div class="form-group col-md-8">
-            <label for="">Espaço Interno: </label>
+            <label for="espaco-interno">Espaço Interno: </label>
           </div>
           <div class="form-group col-md-4">
             <i class="bi bi-star-fill"></i>
@@ -197,7 +200,7 @@
           </div>
 
           <div class="form-group col-md-8">
-            <label for="">Banheiro Adaptado: </label>
+            <label for="banheiro-adaptado">Banheiro Adaptado: </label>
           </div>
           <div class="form-group col-md-4">
             <i class="bi bi-star-fill"></i>
@@ -208,7 +211,7 @@
           </div>
 
           <div class="form-group col-md-8">
-            <label for="">Elevador Acessível: </label>
+            <label for="elevador-acessivel">Elevador Acessível: </label>
           </div>
           <div class="form-group col-md-4">
             <i class="bi bi-star-fill"></i>
@@ -219,12 +222,15 @@
           </div>
 
           <div class="form-group col-md-12">
-            <label for="">Digite sua opinião sobre o estabelecimento: </label>
+            <label for="descricao"
+              >Digite sua opinião sobre o estabelecimento:
+            </label>
           </div>
           <div class="form-group col-md-8">
             <textarea
               name="Opinião do estabelecimento"
-              id=""
+              id="descricao"
+              name="descricao"
               cols="10"
               rows="5"
               class="form-control"
