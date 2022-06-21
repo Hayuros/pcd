@@ -12,6 +12,9 @@
   --font-padrao: "Roboto", sans-serif;
   --bg-padrao: #dfedf2;
 }
+* {
+  font-family: "Roboto";
+}
 body {
   background-color: var(--bg-padrao);
 }
@@ -25,12 +28,6 @@ nav {
 a {
   color: white;
   font-family: var(--font-padrao);
-}
-a:hover {
-  font-family: var(--font-padrao);
-  color: white;
-  font-weight: bold;
-  font-size: 1.5rem;
 }
 
 img,

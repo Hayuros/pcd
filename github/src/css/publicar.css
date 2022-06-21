@@ -7,9 +7,6 @@ form {
   background-color: var(--bg-container);
   border-radius: 1rem;
 }
-h2 {
-  font-family: "Lobster", cursive;
-}
 .btn-salvar {
   background-color: var(--bg-btn-salvar);
 }

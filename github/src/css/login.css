@@ -14,13 +14,6 @@ form {
   background-color: var(--bg-container);
   border-radius: 1rem;
 }
-button:hover {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-h2 {
-  font-family: "Lobster", cursive;
-}
 .modal-body {
   background-color: var(--bg-container);
 }

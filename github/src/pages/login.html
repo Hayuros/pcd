@@ -92,20 +92,23 @@
                 <h5 class="text-center">Fazer Login</h5>
               </div>
               <div class="form-group col-md-12">
-                <label for="">Email ou CPF</label>
+                <label for="exampleInputEmail1">Email</label>
                 <input
                   type="email"
+                  name="email"
                   class="form-control"
-                  id=""
+                  id="email"
                   aria-describedby="emailHelp"
                   placeholder="Insira seu email ou CPF "
                 />
 
-                <label for="">Senha</label>
+                <label for="exampleInputEmail1">Senha</label>
                 <input
                   type="password"
-                  id=""
+                  name="senha"
+                  id="senha"
                   class="form-control"
+                  aria-describedby="emailHelp"
                   placeholder="Senha"
                 />
               </div>
@@ -113,10 +116,7 @@
 
             <div class="form-row">
               <div class="form-group col-md-12">
-                <button
-                  type="button"
-                  class="btn btn-primary btn-block disabled"
-                >
+                <button class="btn btn-block btn-primary disabled" actio>
                   Login
                 </button>
               </div>
@@ -135,7 +135,7 @@
 
             <div class="col-md-12 cad">
               <a
-                class="text-danger disabled"
+                class="disabled"
                 href="#"
                 data-toggle="modal"
                 data-target="#modalRecuperar"
@@ -179,8 +179,8 @@
 >
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-center">Cadastre-se</h5>
+      <div class="modal-header text-center">
+        <h5 class="modal-title">Cadastre-se</h5>
         <button
           type="button"
           class="close"
@@ -196,7 +196,7 @@
         >
           <div class="form-row">
             <div class="form-group col-md-12">
-              <label for="exampleInputEmail1">Nome Completo</label>
+              <label for="nome">Nome Completo</label>
               <input
                 type="text"
                 class="form-control"
@@ -205,7 +205,7 @@
                 placeholder="Insira o nome e Sobrenome"
               />
 
-              <label for="exampleInputEmail1">Email</label>
+              <label for="email">Email</label>
               <input
                 type="email"
                 class="form-control"
@@ -213,9 +213,14 @@
                 name="email"
                 placeholder="Seu Email"
               />
+
+              <label for="categoria">Categoria</label>
+              <select name="categoria" id="categoria" class="form-control">
+                <option value="motora">Motora</option>
+              </select>
             </div>
             <div class="form-group col-md-6">
-              <label for="exampleInputEmail1">Senha</label>
+              <label for="senha">Senha</label>
               <input
                 type="password"
                 class="form-control"
@@ -225,13 +230,13 @@
               />
             </div>
             <div class="form-group col-md-6">
-              <label for="exampleInputEmail1">Confirmar Senha</label>
+              <label for="confirmacao-senha">Confirmação da Senha</label>
               <input
                 type="password"
                 class="form-control"
-                id="confirmar-senha"
-                name="confirmar-senha"
-                placeholder="Confirmar Senha"
+                id="confirmacao-senha"
+                name="confirmacao-senha"
+                placeholder="Confirme sua Senha"
               />
             </div>
           </div>
@@ -239,7 +244,8 @@
       </div>
       <div class="modal-footer">
         <button
-          type="button"
+          type="submit"
+          value="Cadastrar Usuário"
           id="btn-fechar-cadastrar"
           class="btn btn-secondary"
           data-dismiss="modal"
@@ -247,9 +253,14 @@
           Fechar
         </button>
 
-        <button type="button" id="btn-cadastrar" class="btn btn-info">
+        <a
+          type="cancel"
+          id="btn-cadastrar"
+          value="Fechar Modal de Cadastro"
+          class="btn btn-info"
+        >
           Cadastrar
-        </button>
+        </a>
       </div>
     </div>
   </div>
@@ -281,13 +292,13 @@
         <form>
           <div class="form-row">
             <div class="form-group col-md-12">
-              <label for="exampleInputEmail1">Email</label>
+              <label for="email-recuperar">Email</label>
               <input
                 type="email"
                 class="form-control"
                 id="email-recuperar"
                 name="email-recuperar"
-                placeholder="Seu Email"
+                placeholder="Seu Email para Recuperação de Senha"
               />
             </div>
           </div>
