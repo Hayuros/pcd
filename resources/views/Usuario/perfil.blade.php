@@ -17,76 +17,35 @@
                 </svg>
             </div>
         </div>
-        <div class="row my-3 p-2">
-            <div class="col-md-6">
+        <div class="row my-3 p-2 text-center">
+            <div class="col-md-2">
                 <h3>Nome: </h3>
                 <h3>E-mail: </h3>
-                <h3>Categoria da Deficiência: </h3>
-                <h3>Senha: </h3>
+                {{-- <h3>Categoria da Deficiência: </h3> --}}
             </div>
-            <div class="col-md-6">
+            <div class="col-md-10">
                 <h3>{{ $usuario->name }}</h3>
-                <h3>E-mail: </h3>
-                <h3>Categoria da Deficiência: </h3>
-                <h3>Senha: </h3>
+                <h3>{{ $usuario->email }} </h3>
+                {{-- <h3>Categoria da Deficiência: </h3> --}}
             </div>
         </div>
         <div class="row my-3 p-2 text-center">
             <div class="col-md-12">
-                <button class="btn btn-editar btn-lg" type="button" data-toggle="modal" data-target="#modalCadastro">
+                <a class="btn btn-editar btn-lg" href="/Perfil/Editar/" type="button">
                     <i class="bi bi-pencil">Editar Perfil</i>
-                </button>
-                <button class="btn btn-excluir btn-lg" type="button">
-                    <i class="bi bi-trash">Excluir Perfil</i>
-                </button>
+                </a>
+                <form action="/Perfil/Deletar/{id}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-excluir btn-lg" type="submit">
+                        <i class="bi bi-trash">Excluir Perfil</i>
+                    </button>
+                </form>
                 <a class="btn btn-listar btn-lg" type="button" href="/Listar/Postagens/Usuario/{}">
                     <i class="bi bi-list">Listar Postagens</i>
                 </a>
             </div>
         </div>
 
-        <!-- Modal de Edição -->
-        <div class="modal fade justify-content-center" id="modalCadastro" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title text-center">Editar Cadastro</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form class="m-md-5 h-auto w-auto justify-content-center container-fluid">
-                            <div class="form-row">
-                                <div class="form-group col-md-12">
-                                    <label for="exampleInputEmail1">Nome Completo</label>
-                                    <input type="text" class="form-control" id="nome" name="nome"
-                                        placeholder="Insira o nome e Sobrenome" />
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <label for="exampleInputEmail1">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email"
-                                        placeholder="Seu Email" />
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <label for="">Categoria da Deficiência</label>
-                                    <select name="" id="" class="form-control">
-                                        <option value="">...</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-cancelar btn-lg">
-                            <i class="bi bi-trash">Cancelar</i>
-                        </button>
-                        <button type="button" class="btn btn-salvar btn-lg">
-                            <i class="bi bi-check-all">Modificar</i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     @endsection

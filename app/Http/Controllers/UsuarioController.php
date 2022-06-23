@@ -7,6 +7,7 @@ use App\Models\Categoria;
 use App\Models\Estabelecimento;
 use App\Models\Postagen;
 use App\Models\User;
+use BaconQrCode\Renderer\Color\Rgb;
 use Illuminate\Http\Request;
 
 use function GuzzleHttp\Promise\all;
@@ -26,7 +27,9 @@ class UsuarioController extends Controller
 
     public function perfil()
     {
-        return view("Usuario.perfil");
+        $usuario = auth()->user();
+
+        return view('Usuario.perfil', ['usuario' => $usuario]);
     }
 
     public function listaPostagens()
@@ -39,12 +42,29 @@ class UsuarioController extends Controller
         return view('Listagens.postagens', ['categorias' => $categorias, 'estabelecimentos' => $estabelecimentos, 'acessibilidades' => $acessibilidades, 'postagens' => $postagens]);
     }
 
-    public function edit($id)
+    public function edit()
     {
         $usuario = auth()->user();
 
-        $usuario = User::findOrFail($id);
+        return view('Usuario.editar', ['usuario' => $usuario]);
+    }
 
-        return view('Usuario.perfil', ['usuario' => $edit]);
+    public function update(Request $request)
+    {
+
+        $usuario = auth()->user();
+
+        User::findOrFail($usuario->id)->update($request->all());
+
+        return redirect('/feed')->with('msg', 'Usuário editado com Sucesso!');
+    }
+
+    public function destroy()
+    {
+        $usuario = auth()->user();
+
+        User::findOrFail($usuario->id)->delete();
+
+        return redirect('/feed')->with('msg', 'Usuário Deletado com sucesso!');
     }
 }

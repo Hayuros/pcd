@@ -5,7 +5,7 @@
 @section('style', '/css/cadastros.scss')
 
 @section('content')
-    <form action="/Acessibilidades" method="POST" class="m-md-5 shadow-lg">
+    <form action="/Acessibilidades" method="POST" class="m-md-5 shadow-lg cad-edit">
         @csrf
         <div class="form-row">
             <div class="form-group col-md-12">
@@ -48,7 +48,7 @@
                 <button type="submit" value="Cadastrar Acessibilidade" class="btn btn-salvar btn-lg">
                     <i class="bi bi-check-all">Salvar</i>
                 </button>
-                <a type="cancel" href="/Feed" value="Cancelar Cadastro" class="btn btn-cancelar btn-lg">
+                <a type="cancel" href="/feed" value="Cancelar Cadastro" class="btn btn-cancelar btn-lg">
                     <i class="bi bi-trash">Cancelar</i>
                 </a>
             </div>

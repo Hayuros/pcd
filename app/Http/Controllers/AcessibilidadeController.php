@@ -23,6 +23,6 @@ class AcessibilidadeController extends Controller
 
         $acessibilidades->save();
 
-        return redirect('/dashboard');
+        return redirect('/feed');
     }
 }

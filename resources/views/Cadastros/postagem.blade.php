@@ -5,9 +5,13 @@
 @section('style', '/css/cadastros.scss')
 
 @section('content')
-    <h2 class="text-center m-md-5">Nova Publicação</h2>
-    <form action="/Postagens" method="POST" class="m-lg-5 shadow-lg">
+    <form action="/Postagens" method="POST" class="m-lg-5 shadow-lg cad-edit">
         @csrf
+        <div class="form-row text-center m-md-2">
+            <div class="form-group col-md-12">
+                <h2>Nova Publicação</h2>
+            </div>
+        </div>
         <!-- Linha do Endereço do Estabelecimento -->
         <div class="form-row">
             <div class="form-group col-md-12 text-center">
@@ -92,9 +96,9 @@
                 <button type="submit" class="btn btn-salvar btn-lg">
                     <i class="bi bi-check-all">Salvar</i>
                 </button>
-                <button type="button" class="btn btn-cancelar btn-lg">
+                <a type="cancel" href="/feed" value="Cancelar Cadastro" class="btn btn-cancelar btn-lg">
                     <i class="bi bi-trash">Cancelar</i>
-                </button>
+                </a>
             </div>
         </div>
     </form>

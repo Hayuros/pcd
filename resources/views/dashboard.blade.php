@@ -1,4 +1,4 @@
-@extends('Usuario.layouts.main')
+{{-- @extends('Usuario.layouts.main')
 
 @section('title', 'Feed | Pcd em Ação')
 
@@ -57,4 +57,4 @@
             </div>
         </div>
     </div>
-@endsection
+@endsection --}}

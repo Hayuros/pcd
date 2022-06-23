@@ -25,8 +25,10 @@ Route::namespace("Login")->group(function () {
 });
 
 Route::namespace("Usuario")->group(function () {
-    Route::get("/Perfil", [UsuarioController::class, "perfil"]);
-    Route::post("/Perfil/{id}", [UsuarioController::class, "perfil"]);
+    Route::get("/Perfil", [UsuarioController::class, "perfil"])->middleware('auth');
+    Route::get("/Perfil/Editar", [UsuarioController::class, "edit"])->middleware('auth');
+    Route::put("/Perfil/Atualizar/{id}", [UsuarioController::class, "update"])->middleware('auth');
+    Route::delete("/Perfil/Deletar/{id}", [UsuarioController::class, "destroy"])->middleware('auth');
 });
 
 Route::namespace("Cadastros")->group(function () {
@@ -60,5 +62,5 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', [UsuarioController::class, 'index']);
+    Route::get('/feed', [UsuarioController::class, 'index']);
 });

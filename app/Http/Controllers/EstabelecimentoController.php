@@ -24,6 +24,6 @@ class EstabelecimentoController extends Controller
 
         $estabelecimento->save();
 
-        return redirect("/Feed")->with('msg', "Estabelecimento criado com Sucesso!");
+        return redirect("/feed")->with('msg', "Estabelecimento criado com Sucesso!");
     }
 }
