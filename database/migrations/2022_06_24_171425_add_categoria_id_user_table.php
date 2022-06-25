@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePostagens extends Migration
+class AddCategoriaIdUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,8 @@ class CreatePostagens extends Migration
      */
     public function up()
     {
-        Schema::create('postagens', function (Blueprint $table) {
-            $table->id();
-            $table->text('descricao');
-            $table->integer('qtdEstrelas');
+        Schema::table('users', function (Blueprint $table) {
             $table->foreignId('categoria_id')->constrained();
-            $table->foreignId('estabelecimento_id')->constrained();
-            $table->foreignId('user_id')->constrained();
-            $table->timestamps();
         });
     }
 
@@ -31,6 +25,8 @@ class CreatePostagens extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('postagens');
+        Schema::table('users', function (Blueprint $table) {
+            $table->foreignId('categoria_id')->constrained()->onDelete('cascade');
+        });
     }
 }

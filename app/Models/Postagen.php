@@ -11,16 +11,21 @@ class Postagen extends Model
 
     public function acessibilidades()
     {
-        return $this->belongsToMany('App\Models\Acessibilidade');
+        return $this->belongsToMany(Acessibilidade::class);
     }
 
     public function estabelecimento()
     {
-        return $this->hasMany('App\Models\Estabelecimento');
+        return $this->belongsTo(Estabelecimento::class);
     }
 
     public function categoria()
     {
-        return $this->hasMany('App\Models\Categoria');
+        return $this->belongsTo(Categoria::class);
+    }
+
+    public function usuario()
+    {
+        return $this->belongsTo(User::class);
     }
 }

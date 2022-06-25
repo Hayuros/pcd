@@ -30,10 +30,7 @@
             </div>
         </div>
         <div class="row my-3 p-2 text-center">
-            <div class="col-md-12">
-                <a class="btn btn-editar btn-lg" href="/Perfil/Editar/" type="button">
-                    <i class="bi bi-pencil">Editar Perfil</i>
-                </a>
+            <div class="col-md-4">
                 <form action="/Perfil/Deletar/{id}" method="POST">
                     @csrf
                     @method('DELETE')
@@ -41,6 +38,14 @@
                         <i class="bi bi-trash">Excluir Perfil</i>
                     </button>
                 </form>
+
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-editar btn-lg" href="/Perfil/Editar/" type="button">
+                    <i class="bi bi-pencil">Editar Perfil</i>
+                </a>
+            </div>
+            <div class="col-md-4">
                 <a class="btn btn-listar btn-lg" type="button" href="/Listar/Postagens/Usuario/{}">
                     <i class="bi bi-list">Listar Postagens</i>
                 </a>

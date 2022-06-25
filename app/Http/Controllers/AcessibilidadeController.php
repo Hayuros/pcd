@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Acessibilidade;
+use App\Models\Postagen;
 use Illuminate\Http\Request;
 
 class AcessibilidadeController extends Controller

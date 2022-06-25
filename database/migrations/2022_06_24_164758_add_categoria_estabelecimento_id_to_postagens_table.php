@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAcessibilidadePostagemTable extends Migration
+class AddCategoriaEstabelecimentoIdToPostagensTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateAcessibilidadePostagemTable extends Migration
      */
     public function up()
     {
-        Schema::create('acessibilidade_postagen', function (Blueprint $table) {
-            $table->foreignId('acessibilidade_id')->constrained();
-            $table->foreignId('postagen_id')->constrained();
-            $table->timestamps();
+        Schema::table('postagens', function (Blueprint $table) {
+            $table->foreignId('postagem_id');
+            $table->foreignId('estabelecimento_id');
         });
     }
 
@@ -27,6 +26,8 @@ class CreateAcessibilidadePostagemTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('acessibilidade_postagen');
+        Schema::table('postagens', function (Blueprint $table) {
+            //
+        });
     }
 }

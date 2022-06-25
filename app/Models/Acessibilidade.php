@@ -10,8 +10,8 @@ class Acessibilidade extends Model
 {
     use HasFactory;
 
-    public function postagens()
+    public function acessibilidadeDaPostagem()
     {
-        return $this->belongsToMany('App\Models\Postagen');
+        return $this->belongsToMany(Postagen::class);
     }
 }

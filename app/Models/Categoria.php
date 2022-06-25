@@ -11,6 +11,6 @@ class Categoria extends Model
 
     public function postagem()
     {
-        return $this->belongsTo('App\Models\Postagen');
+        return $this->hasMany(Postagen::class);
     }
 }

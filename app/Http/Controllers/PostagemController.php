@@ -24,29 +24,27 @@ class PostagemController extends Controller
 
     public function exibirPostagem()
     {
-        
+
 
         return view("Exibir.postagem");
     }
 
     public function store(Request $request)
     {
+        $usuario = auth()->user();
         $postagem = new Postagen;
-        $acessibilidades = new Acessibilidade;
-        $estabelecimento = new Estabelecimento;
-        $categorias = new Categoria;
+        $acessibilidade = Acessibilidade::findOrFail($request->acessibilidade);
 
-        $categorias->id = $request->idCategoria;
-        $estabelecimento->id = $request->idEstabelecimento;
-
+        $postagem->user_id = $usuario->id;
+        $postagem->estabelecimento_id = $request->estabelecimento;
+        $postagem->categoria_id = $request->categoria;
         $postagem->descricao = $request->descricao;
-        $postagem->categoria_id = $categorias->id;
-        $postagem->estabelecimento_id = $request->idEstabelecimento;
-
-
-        $acessibilidades->id = $request->idAcessibilidade;
-        $acessibilidades->postagens()->attach($acessibilidades->id);
+        $postagem->qtdEstrelas = $request->qtdEstrelas;
 
         $postagem->save();
+
+        $acessibilidade->acessibilidadeDaPostagem()->attach($postagem->id);
+
+        return redirect('/feed')->with('msg', 'Postagem feita com Sucesso!');
     }
 }

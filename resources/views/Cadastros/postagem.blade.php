@@ -26,7 +26,7 @@
             <div class="form-group col-md-10">
                 <select name="estabelecimento" id="estabelecimento" class="form-control">
                     @foreach ($estabelecimentos as $estabelecimento)
-                        <option value="{{ $idEstabelecimento = $estabelecimento->id }}">{{ $estabelecimento->nome }}
+                        <option value="{{ $estabelecimento->id }}">{{ $estabelecimento->nome }}
                         </option>
                     @endforeach
                 </select>
@@ -40,7 +40,7 @@
             <div class="form-group col-md-10">
                 <select name="categoria" id="categoria" class="form-control">
                     @foreach ($categorias as $categoria)
-                        <option value="{{ $idCategoria = $categoria->id }}">{{ $categoria->nome }}</option>
+                        <option value="{{ $categoria->id }}">{{ $categoria->nome }}</option>
                     @endforeach
                 </select>
             </div>
@@ -69,9 +69,10 @@
             @foreach ($acessibilidades as $acessibilidade)
                 <div class="form-group col-md-8">
                     <label for="acessibilidade">{{ $acessibilidade->nome }}</label>
+                    <input type="hidden" name="acessibilidade" id="acessibilidade" value="{{ $acessibilidade->id }}">
                 </div>
                 <div class="form-group col-md-4">
-                    <select id="" class="form-control">
+                    <select id="qtdEstrelas" name="qtdEstrelas" class="form-control">
                         @for ($i = 0; $i < $acessibilidade->qtdEstrelas; $i++)
                             <option value="{{ $i }}">{{ $i }}</option>
                         @endfor
