@@ -45,11 +45,11 @@
                     <i class="bi bi-pencil">Editar Perfil</i>
                 </a>
             </div>
-            <div class="col-md-4">
+            {{-- <div class="col-md-4">
                 <a class="btn btn-listar btn-lg" type="button" href="/Listar/Postagens/Usuario/{}">
                     <i class="bi bi-list">Listar Postagens</i>
                 </a>
-            </div>
+            </div> --}}
         </div>
 
 

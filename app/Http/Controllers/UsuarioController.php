@@ -16,13 +16,19 @@ class UsuarioController extends Controller
 {
     public function index()
     {
-        $postagens =  Postagen::all();
-        $categorias = Categoria::all();
-        $estabelecimentos = Estabelecimento::all();
-        $acessibilidades = Acessibilidade::all();
+        $postagem =  new Postagen();
+        $postagens = Postagen::all();
+        // $categorias = Categoria::first();
+        // $estabelecimentos = Estabelecimento::all();
+        // $acessibilidades = Acessibilidade::all();
+
+        // $categoriaPostagem = Categoria::where('id', $postagem->categoria_id)->first();
+        // $acessibilidadePostagem = Acessibilidade::where('id', $postagem->acessibilidade_id)->first();
+        // $estabelecimentoPostagem = Estabelecimento::where('id', $postagem->estabelecimento_id)->first();
 
 
-        return view("Usuario.feed", ['categorias' => $categorias, 'estabelecimentos' => $estabelecimentos, 'acessibilidades' => $acessibilidades, 'postagens' => $postagens]);
+        // return view("Usuario.feed", ['postagens' => $postagens, 'categoriaPostagem' => $categoriaPostagem, 'estabelecimentoPostagem' => $estabelecimentoPostagem, 'acessibilidadePostagem' => $acessibilidadePostagem]);
+        return view("Usuario.feed", ['postagens' => $postagens]);
     }
 
     public function perfil()

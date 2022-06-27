@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="/css/global.scss" />
     <link rel="stylesheet" href="@yield('style')" />
 
-
     <title>@yield('title')</title>
 </head>
 
@@ -106,24 +105,80 @@
             </div>
             <div class="py-5">
                 <div class="py-2">
-                    <button class="btn py-2">A+</button>
+                    <button class="btn" name="increase-font" id="increase-font" title="Aumentar fonte">
+                        A +
+                    </button>
                 </div>
                 <div class="py-2">
-                    <button class="btn">A+</button>
+                    <button class="btn" name="decrease-font" id="decrease-font" title="Diminuir fonte">
+                        A -
+                    </button>
                 </div>
                 <div class="py-2">
-                    <button class="btn"><img src="/img/contrast-circle-symbol.png" alt=""></button>
+                    <button class="btn" id="contraste"><img src="/img/contrast-circle-symbol.png"
+                            alt=""></button>
                 </div>
             </div>
         </div>
+    </main>
+
+    <footer>
+        <script>
+            window.onload = function() {
+                var elementBody = document.querySelector("body");
+                var elementBtnIncreaseFont =
+                    document.getElementById("increase-font");
+                var elementBtnDecreaseFont =
+                    document.getElementById("decrease-font");
+                var fontSize = 100;
+                var increaseDecrease = 25;
+                elementBtnIncreaseFont.addEventListener("click", function(event) {
+                    fontSize = fontSize + increaseDecrease;
+                    elementBody.style.fontSize = fontSize + "%";
+                });
+                elementBtnDecreaseFont.addEventListener("click", function(event) {
+                    fontSize = fontSize - increaseDecrease;
+                    elementBody.style.fontSize = fontSize + "%";
+                });
+            };
+
+            function constrast() {
+                // the css we are going to inject
+                var css = 'html {-webkit-filter: invert(100%);' +
+                    '-moz-filter: invert(100%);' +
+                    '-o-filter: invert(100%);' +
+                    '-ms-filter: invert(100%); }',
+                    head = document.getElementsByTagName('head')[0],
+                    style = document.createElement('style');
+                // a hack, so you can "invert back" clicking the bookmarklet again
+                if (!window.counter) {
+                    window.counter = 1;
+                } else {
+                    window.counter++;
+                    if (window.counter % 2 == 0) {
+                        var css =
+                            'html {-webkit-filter: invert(0%); -moz-filter:    invert(0%); -o-filter: invert(0%); -ms-filter: invert(0%); }'
+                    }
+                };
+                style.type = 'text/css';
+                if (style.styleSheet) {
+                    style.styleSheet.cssText = css;
+                } else {
+                    style.appendChild(document.createTextNode(css));
+                }
+                //injecting the css to the head
+                head.appendChild(style);
+            }
+
+            const btn = document.getElementById("contraste");
+            btn.addEventListener("click", function() {
+                constrast();
+            });
+        </script>
         <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
         <script>
             new window.VLibras.Widget('https://vlibras.gov.br/app');
         </script>
-    </main>
-
-    <footer>
-
         <!-- JavaScript (Opcional) -->
         <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

@@ -11,7 +11,7 @@ class Postagen extends Model
 
     public function acessibilidades()
     {
-        return $this->belongsToMany(Acessibilidade::class);
+        return $this->belongsTo(Acessibilidade::class);
     }
 
     public function estabelecimento()
@@ -27,5 +27,10 @@ class Postagen extends Model
     public function usuario()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function comentarios()
+    {
+        return $this->belongsTo(Comentario::class);
     }
 }

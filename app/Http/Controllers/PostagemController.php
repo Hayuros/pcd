@@ -33,17 +33,18 @@ class PostagemController extends Controller
     {
         $usuario = auth()->user();
         $postagem = new Postagen;
-        $acessibilidade = Acessibilidade::findOrFail($request->acessibilidade);
+        // $acessibilidade = Acessibilidade::findOrFail($request->acessibilidade);
 
         $postagem->user_id = $usuario->id;
         $postagem->estabelecimento_id = $request->estabelecimento;
         $postagem->categoria_id = $request->categoria;
+        $postagem->acessibilidade_id = $request->acessibilidade;
         $postagem->descricao = $request->descricao;
         $postagem->qtdEstrelas = $request->qtdEstrelas;
 
         $postagem->save();
 
-        $acessibilidade->acessibilidadeDaPostagem()->attach($postagem->id);
+        // $acessibilidade->acessibilidadeDaPostagem()->attach($postagem->id);
 
         return redirect('/feed')->with('msg', 'Postagem feita com Sucesso!');
     }

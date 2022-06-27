@@ -20,6 +20,7 @@ class CreatePostagens extends Migration
             $table->foreignId('categoria_id')->constrained();
             $table->foreignId('estabelecimento_id')->constrained();
             $table->foreignId('user_id')->constrained();
+            $table->foreignId('acessibilidade_id')->constrained();
             $table->timestamps();
         });
     }

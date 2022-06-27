@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AcessibilidadeController;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\ComentarioController;
 use App\Http\Controllers\EstabelecimentoController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostagemController;
@@ -46,6 +47,9 @@ Route::namespace("Cadastros")->group(function () {
     //Rotas para Cadastro de Acessibilidade
     Route::get('/Cadastrar/Acessibilidade', [AcessibilidadeController::class, 'index'])->middleware('auth');
     Route::post('Acessibilidades', [AcessibilidadeController::class, 'store'])->middleware('auth');
+
+    //Rota para cadastro de Comentário
+    Route::post('/Comentarios', [ComentarioController::class, 'comentar'])->middleware('auth');
 });
 
 Route::namespace("Listagens")->group(function () {

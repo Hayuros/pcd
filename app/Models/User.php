@@ -63,4 +63,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Postagen::class);
     }
+
+    public function comentarios()
+    {
+        return $this->belongsTo(Comentario::class);
+    }
 }

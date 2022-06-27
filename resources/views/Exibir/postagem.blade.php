@@ -31,7 +31,7 @@
         </div>
 
         <div class="row py-5">
-            <div class="col-md-12">
+            {{-- <div class="col-md-12">
                 <h5>Fotos do Estabelecimento</h5>
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
@@ -54,8 +54,18 @@
                         <span class="sr-only">Próximo</span>
                     </a>
                 </div>
+            </div> --}}
+
+
+            <div class="input-group col-md-8">
+                <div class="input-group-prepend">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon1">Botão</button>
+                </div>
+                <textarea type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+                    aria-describedby="button-addon1"></textarea>
             </div>
         </div>
+
 
         <div class="row py-5">
             <div class="col-md-12">

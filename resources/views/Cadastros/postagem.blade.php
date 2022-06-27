@@ -66,19 +66,26 @@
         </div>
 
         <div class="form-row">
-            @foreach ($acessibilidades as $acessibilidade)
-                <div class="form-group col-md-8">
-                    <label for="acessibilidade">{{ $acessibilidade->nome }}</label>
-                    <input type="hidden" name="acessibilidade" id="acessibilidade" value="{{ $acessibilidade->id }}">
-                </div>
-                <div class="form-group col-md-4">
-                    <select id="qtdEstrelas" name="qtdEstrelas" class="form-control">
-                        @for ($i = 0; $i < $acessibilidade->qtdEstrelas; $i++)
-                            <option value="{{ $i }}">{{ $i }}</option>
-                        @endfor
-                    </select>
-                </div>
-            @endforeach
+            <div class="form-group col-md-12 text-center">
+                <label for="acessibilidade">Categoria da Acessibilidade</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-8">
+                <select id="acessibilidade" name="acessibilidade" class="form-control">
+                    @foreach ($acessibilidades as $acessibilidade)
+                        <option value="{{ $acessibilidade->id }}">{{ $acessibilidade->nome }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <select id="qtdEstrelas" name="qtdEstrelas" class="form-control">
+                    @for ($i = 0; $i < $acessibilidade->qtdEstrelas; $i++)
+                        <option value="{{ $i }}">{{ $i }}</option>
+                    @endfor
+                </select>
+            </div>
         </div>
 
 

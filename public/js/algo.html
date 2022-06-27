@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="btn-container">
+            <button
+                name="increase-font"
+                id="increase-font"
+                title="Aumentar fonte"
+            >
+                A +
+            </button>
+            <button
+                name="decrease-font"
+                id="decrease-font"
+                title="Diminuir fonte"
+            >
+                A -
+            </button>
+        </div>
+    </body>
+    <script>
+        window.onload = function () {
+            var elementBody = document.querySelector("body");
+            var elementBtnIncreaseFont =
+                document.getElementById("increase-font");
+            var elementBtnDecreaseFont =
+                document.getElementById("decrease-font");
+            var fontSize = 100;
+            var increaseDecrease = 25;
+            elementBtnIncreaseFont.addEventListener("click", function (event) {
+                fontSize = fontSize + increaseDecrease;
+                elementBody.style.fontSize = fontSize + "%";
+            });
+            elementBtnDecreaseFont.addEventListener("click", function (event) {
+                fontSize = fontSize - increaseDecrease;
+                elementBody.style.fontSize = fontSize + "%";
+            });
+        };
+    </script>
+</html>
