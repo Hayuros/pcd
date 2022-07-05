@@ -3,6 +3,11 @@
     --bg-nav: #144673;
     --bg-container: #ebebeb;
     --bg-dropdown: #4a7ba7;
+    --bg-btn-salvar: #013d3d;
+    --bg-btn-cancelar: #4a2014;
+    --bg-btn-listar: #ffd59e;
+    --font-padrao: "Roboto", sans-serif;
+    --bg-padrao: #dfedf2;
 }
 * {
     font-family: "Roboto";
@@ -19,12 +24,39 @@ nav {
     color: white;
 }
 a {
-    color: black;  
+    color: black;
 }
-a {
+a:hover {
     color: black;
 }
 img,
 .navbar-toggler {
     margin: 0 2rem 0 2rem;
+}
+
+.msg {
+    background-color: var(--bg-btn-salvar);
+    width: 100%;
+    margin-bottom: 0px;
+    text-align: center;
+    padding: 1rem;
+}
+
+//Botões Padrão
+.btn {
+    border: none;
+}
+.btn-editar {
+    background-color: var(--bg-nav);
+    color: white;
+}
+.btn-excluir,
+.btn-cancelar {
+    background-color: var(--bg-btn-cancelar);
+}
+.btn-listar {
+    background-color: var(--bg-btn-listar);
+}
+.btn-salvar {
+    background-color: var(--bg-btn-salvar);
 }
