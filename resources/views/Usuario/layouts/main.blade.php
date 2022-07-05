@@ -114,6 +114,11 @@
                         A -
                     </button>
                 </div>
+                {{-- <div class="py-2">
+                    <button class="btn" name="restore-font" id="restore-font" title="Fonte em tamanho normal">
+                        A
+                    </button>
+                </div> --}}
                 <div class="py-2">
                     <button class="btn" id="contraste"><img src="/img/contrast-circle-symbol.png"
                             alt=""></button>
@@ -126,10 +131,9 @@
         <script>
             window.onload = function() {
                 var elementBody = document.querySelector("body");
-                var elementBtnIncreaseFont =
-                    document.getElementById("increase-font");
-                var elementBtnDecreaseFont =
-                    document.getElementById("decrease-font");
+                var elementBtnIncreaseFont = document.getElementById("increase-font");
+                var elementBtnDecreaseFont = document.getElementById("decrease-font");
+                var elementBtnRestoreFont = document.getElementById('restore-font');
                 var fontSize = 100;
                 var increaseDecrease = 25;
                 elementBtnIncreaseFont.addEventListener("click", function(event) {
@@ -140,14 +144,18 @@
                     fontSize = fontSize - increaseDecrease;
                     elementBody.style.fontSize = fontSize + "%";
                 });
+                // elementBtnRestoreFont.addEventListener("click", function(event) {
+                //     fontSize = fontSize;
+                //     elementBody.style.fontSize = fontSize + '%';
+                // });
             };
 
             function constrast() {
                 // the css we are going to inject
-                var css = 'html {-webkit-filter: invert(100%);' +
-                    '-moz-filter: invert(100%);' +
-                    '-o-filter: invert(100%);' +
-                    '-ms-filter: invert(100%); }',
+                var css = 'html {-webkit-filter: invert(80%);' +
+                    '-moz-filter: invert(30%);' +
+                    '-o-filter: invert(30%);' +
+                    '-ms-filter: invert(30%); }',
                     head = document.getElementsByTagName('head')[0],
                     style = document.createElement('style');
                 // a hack, so you can "invert back" clicking the bookmarklet again

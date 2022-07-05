@@ -31,14 +31,18 @@
                         <div class="card-body">
                             <div class="card-deck">
                                 <!--<div class="card-text col-md-6">
-                                        {{-- <p>Acessibilidade da Postagem</p> --}}
-                                        {{-- <h5>{{ $postagen->acessibilidade->nome }}</h5> --}}
-                                        {{-- <p>{{ $categoriaPostagem }}</p> --}}
-                                        {{-- <p>{{ $postagen->acessibilidade_nome }}</p> --}}
-                                    </div>-->
+                                                        {{-- <p>Acessibilidade da Postagem</p> --}}
+                                                        {{-- <h5>{{ $postagen->acessibilidade->nome }}</h5> --}}
+                                                        {{-- <p>{{ $categoriaPostagem }}</p> --}}
+                                                        {{-- <p>{{ $postagen->acessibilidade_nome }}</p> --}}
+                                                    </div>-->
 
                                 <div class="card-text col-md-6">
-                                    <p>Categoria da Acessibilidade da Postagem</p>
+                                    <h5>Informação da postagem</h5>
+                                    <p>{{ $postagen->descricao }}</p>
+                                </div>
+                                <div class="card-text col-md-6">
+                                    <h5>Categoria da Acessibilidade da postagem</h5>
                                     <p>{{ $postagen->categoria->nome }}</p>
                                 </div>
                             </div>
